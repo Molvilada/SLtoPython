@@ -8,6 +8,7 @@ public class SLtoPython extends LenguajeSLBaseListener {
 
     private static int tabs = 0;
     private static int tabs_si = 0;
+    private static int caso = 0;
 
 //    @Override public void enterSentencia(LenguajeSLParser.SentenciaContext ctx) {
 //
@@ -100,6 +101,38 @@ public class SLtoPython extends LenguajeSLBaseListener {
             System.out.println(parametros + "=input()");
         }
     }
+
+    @Override public void enterEval(LenguajeSLParser.EvalContext ctx) {
+
+    }
+
+    @Override public void exitEval(LenguajeSLParser.EvalContext ctx) {
+        caso = 0;
+        tabs--;
+    }
+
+    @Override public void enterCaso(LenguajeSLParser.CasoContext ctx) {
+        for (int i = 0; i < tabs_si; i++) System.out.print("\t");
+        String condicion = ctx.condicion().getText();
+        if (caso == 0){
+            System.out.println("if " + condicion + ":");
+            tabs_si = tabs;
+            tabs++;
+        }else{
+            System.out.println("elif " + condicion + ":");
+            tabs_si++;
+        }
+
+
+    }
+
+    @Override public void exitCaso(LenguajeSLParser.CasoContext ctx) {
+
+        caso++;
+        tabs_si--;
+    }
+
+
 }
 
 

@@ -1,27 +1,25 @@
 var
-    n1, // Cantidad de unos,
-    n3, // de tres y
-    n5 : numerico // de cincos
-    pnt : numerico // Puntaje obtenido por un alumno
-    k : numerico
+    let : cadena
+    msg : cadena
 inicio
-    k = 1
-    n1 = 0; n3 = 0; n5 = 0
-    repetir
-        leer (pnt)
-        si ( pnt >= 95 )
-        {
-            n5 = n5 + 1
-            sino si ( pnt >= 85 )
-                n3 = n3 + 1
-            sino si ( pnt < 60 )
-                n1 = n1 + 1
-            sino
-                imprimir("sino")
-        }
-        k = k + 1
-    hasta ( k > 20 )
-    imprimir ("\nCantidad de unos: ", n1,
-    "\nCantidad de tres: ", n3,
-    "\nCantidad de cincos: ", n5);
+    leer (let)
+    /*
+    Consideremos solo el primer carácter, por si haya tipeado
+    más de uno.
+    Observar cómo se usan los corchetes para seleccionar el
+    primer carácter.
+    */
+    let = let [1]
+    eval
+    {
+        caso ( let >= 'A' and let <= 'Z' )
+        msg = "letra mayúscula"
+        caso ( let >= 'a' and let <= 'z' )
+        msg = "letra minúscula"
+        caso ( let >= '0' and let <= '9' )
+        msg = "dígito"
+        sino
+        msg = "algún otro"
+    }
+    imprimir ("\nEl carácter que usted ingresó es ", msg)
 fin
