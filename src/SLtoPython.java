@@ -300,6 +300,39 @@ public class SLtoPython extends LenguajeSLBaseListener {
         }
         tabs++;
     }
+
+    @Override
+    public void enterVariables(LenguajeSLParser.VariablesContext ctx) {
+        String variables = ctx.getText();
+        char [] aux = variables.toCharArray();
+        String imprimir = "";
+        int j=0;
+        boolean bandera = true;
+        for(int i = 0; i<aux.length;i++){
+            if(aux[i] == ':' && aux[i+8]=='o'){
+                j = i+9;
+            }
+            if(i + 6 < aux.length && aux[i] == ':' && aux[i+6]=='r' && bandera ){
+                for(;j < i;j++){
+                    imprimir += aux[j];
+                }
+                imprimir += "= [";
+                String number = "";
+                int f = i+1;
+                while(aux[f+7]!=']'){
+                    number += aux[f+7];
+                    f++;
+                }
+                int result = Integer.parseInt(number);
+                for(f=0;f<result;f++){
+                    imprimir += f + ",";
+                }
+                imprimir += "10]";
+                break;
+            }
+        }
+        System.out.println(imprimir);
+    }
 }
 
 

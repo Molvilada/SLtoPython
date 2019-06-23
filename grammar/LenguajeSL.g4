@@ -52,7 +52,7 @@ tipo
     : ID DOS_PUNTOS tipo_id
     ;
 
-constante
+constante //Ya
     : ID ASIGNACION a
     ;
 

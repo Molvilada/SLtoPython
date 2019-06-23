@@ -1,26 +1,11 @@
 var
 tot : numerico
 n : numerico
+f : vector [10] numerico
 inicio
-cls()
-imprimir_explicacion()
-si (a<12 and b && c){
-    imprimir ("")
-}
-leer (n)
-calcular_suma (n)
-fin
-subrutina imprimir_explicacion()
-inicio
-fin
-subrutina calcular_suma (primero, arroz, perro, casa: numerico; entero_tope : numerico; hola : cadena; woli : cadena) retorna numerico
-var
-k : numerico
-inicio
-tot = 0
-desde k = 1 hasta entero_tope
+desde k = 1 hasta 10
 {
-tot = tot + k
+    f[k] = 10
 }
-retorna k
+imprimir(f[10])
 fin
