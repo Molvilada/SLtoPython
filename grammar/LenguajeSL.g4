@@ -8,7 +8,7 @@ nombre_programa
     : PROGRAMA ID
     ;
 
-subrutina
+subrutina //Ya
     : SUBRUTINA ID PAR_IZQ lista_argumentos? PAR_DER retorna_s? listas* programa_principal
     ;
 
@@ -17,7 +17,7 @@ lista_argumentos
     | tipo_var_argumentos
     ;
 
-tipo_var_argumentos
+tipo_var_argumentos //Ya
     : REF? id_comas DOS_PUNTOS tipo_id
     ;
 
@@ -83,54 +83,54 @@ matriz
     ;
 
 sentencia
-    : si
-    | mientras
-    | repetir
-    | eval
-    | desde
-    | funcion
-    | retorna
-    | asignacion
-    | sentencia PUNTO_COMA
+    : si //Ya
+    | mientras //Ya
+    | repetir //Ya
+    | eval //Ya
+    | desde //Ya
+    | funcion //Ya
+    | retorna //Ya
+    | asignacion //Ya
+    | sentencia PUNTO_COMA //?
     ;
 
-si
+si //Ya
     : SI PAR_IZQ condicion PAR_DER LLAVE_IZQ sentencia* sino_si* sino? LLAVE_DER
     ;
 
-mientras
+mientras //Ya
     : MIENTRAS PAR_IZQ condicion PAR_DER LLAVE_IZQ sentencia* LLAVE_DER
     ;
 
-repetir
+repetir //Ya
     : REPETIR sentencia* HASTA PAR_IZQ condicion PAR_DER
     ;
 
-eval
+eval //Ya
     : EVAL LLAVE_IZQ caso+ sino LLAVE_DER
     ;
 
-desde
+desde //Ya
     : DESDE ID ASIGNACION a HASTA a paso? LLAVE_IZQ sentencia* LLAVE_DER
     ;
 
-funcion
+funcion //Ya
     : ID PAR_IZQ parametros? PAR_DER
     ;
 
-asignacion
+asignacion //Ya
     : id_complejo ASIGNACION expresion
     ;
 
-sino_si
+sino_si //Ya
     : SINO_SI PAR_IZQ condicion PAR_DER sentencia*
     ;
 
-sino
+sino //Ya
     : SINO sentencia*
     ;
 
-caso
+caso //Ya
     : CASO PAR_IZQ condicion PAR_DER sentencia*
     ;
 
@@ -183,7 +183,7 @@ llave
     | a_comas
     ;
 
-retorna
+retorna //Ya
     : RETORNA PAR_IZQ? a PAR_DER?
     ;
 

@@ -3,12 +3,14 @@ import org.antlr.v4.runtime.tree.ErrorNode;
 import org.antlr.v4.runtime.tree.TerminalNode;
 
 import javax.xml.bind.SchemaOutputResolver;
+import java.util.Stack;
 
 public class SLtoPython extends LenguajeSLBaseListener {
 
     private static int tabs = 0;
     private static int tabs_si = 0;
     private static int caso = 0;
+    private static String enterTipo_var_argumentos = "";
 
 //    @Override public void enterSentencia(LenguajeSLParser.SentenciaContext ctx) {
 //
@@ -29,9 +31,12 @@ public class SLtoPython extends LenguajeSLBaseListener {
         System.out.println("if " + condicion + ":");
         tabs_si = tabs;
         tabs++;
-
-
     }
+
+    /*@Override
+    /public void enterCondicion(LenguajeSLParser.CondicionContext ctx) {
+        System.out.print(ctx.condicion().children);
+    }*/
 
     @Override public void exitSi(LenguajeSLParser.SiContext ctx) {
         tabs--;
@@ -99,6 +104,8 @@ public class SLtoPython extends LenguajeSLBaseListener {
         }
         else if (id.equals("leer")){
             System.out.println(parametros + "=input()");
+        }else{
+            System.out.println(id + "(" + parametros + ")");
         }
     }
 
@@ -147,7 +154,57 @@ public class SLtoPython extends LenguajeSLBaseListener {
         }
     }
 
+    @Override
+    public void enterDesde(LenguajeSLParser.DesdeContext ctx) {
+        for (int i = 0; i < tabs; i++) System.out.print("\t");
+        System.out.print("for ");
+        if (ctx.paso()!= null){
+            System.out.println(ctx.ID().getText()+" in range(" + ctx.a().get(0).getText()+ "," + ctx.a().get(1).getText() + "," + ctx.paso().a().getText() + "):");
+        }else{
+            System.out.println(ctx.ID().getText()+" in range(" + ctx.a().get(0).getText()+ "," + ctx.a().get(1).getText() + "):");
+        }
+        tabs++;
+    }
 
+    @Override
+    public void exitDesde(LenguajeSLParser.DesdeContext ctx) {
+        tabs--;
+    }
+
+    @Override
+    public void enterRetorna(LenguajeSLParser.RetornaContext ctx) {
+        for (int i = 0; i < tabs; i++) System.out.print("\t");
+        if(ctx.PAR_IZQ()!=null){
+            System.out.println("return" +ctx.PAR_IZQ() + ctx.a().getText() + ctx.PAR_DER());
+        }else {
+            System.out.println("return " + ctx.a().getText());
+        }
+    }
+
+    @Override
+    public void enterSubrutina(LenguajeSLParser.SubrutinaContext ctx) {
+        for (int i = 0; i < tabs; i++) System.out.print("\t");
+        if(ctx.lista_argumentos()!=null){
+            String aux = ctx.ID().getText() + "(" + ctx.lista_argumentos().getText();
+            char [] copia_aux = aux.toCharArray();
+            String imprimir = "";
+            boolean bandera = true;
+            for(int i = 0; i<copia_aux.length;i++) {
+                if (copia_aux[i] == ':') {
+                    bandera = false;
+                } else if (copia_aux[i] == ';') {
+                    bandera = true;
+                    copia_aux[i] = ',';
+                }if (bandera) {
+                    imprimir += copia_aux[i];
+                }
+            }
+            System.out.print("def " + ctx.ID().getText() + "(" + imprimir + "):");
+        }else{
+            System.out.println("def " + ctx.ID().getText() + "():");
+        }
+        tabs++;
+    }
 }
 
 

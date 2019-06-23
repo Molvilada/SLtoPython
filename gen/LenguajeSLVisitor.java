@@ -1,4 +1,4 @@
-// Generated from C:/Users/laura/Documentos/Laura/Universidad/2019-1/Lenguajes/Laboratorios/Lab_3/SLtoPython/grammar\LenguajeSL.g4 by ANTLR 4.7.2
+// Generated from A:/Semestre VIII/Lenguajes de programación/SLtoPython/grammar\LenguajeSL.g4 by ANTLR 4.7.2
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**

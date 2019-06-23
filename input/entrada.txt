@@ -1,26 +1,26 @@
 var
-let : cadena
-msg : cadena
+tot : numerico
+n : numerico
 inicio
-leer (let)
-/*
-Consideremos solo el primer carácter, por si haya tipeado
-más de uno.
-Observar cómo se usan los corchetes para seleccionar el
-primer carácter.
-*/
-let = let [1]
-eval
-{
-caso ( let >= 'A' and let <= 'Z' )
-msg = "letra mayúscula"
-caso ( let >= 'a' and let <= 'z' )
-msg = "letra minúscula"
-caso ( let >= '0' and let <= '9' )
-msg = "dígito"
-sino
-msg = "algún otro"
+cls()
+imprimir_explicacion()
+si (a and b && c){
+    imprimir ("")
 }
-imprimir ("\nEl carácter que usted ingresó es ", msg)
+leer (n)
+calcular_suma (n)
 fin
-
+subrutina imprimir_explicacion()
+inicio
+fin
+subrutina calcular_suma (primero, arroz, perro, casa: numerico; entero_tope : numerico; hola : cadena; woli : cadena) retorna numerico
+var
+k : numerico
+inicio
+tot = 0
+desde k = 1 hasta entero_tope
+{
+tot = tot + k
+}
+retorna k
+fin
