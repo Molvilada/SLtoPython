@@ -26,7 +26,7 @@ retorna_s //No lo necesita
     : RETORNA tipo_id
     ;
 
-listas
+listas //Ya
     : tipos
     | constantes
     | variables
@@ -74,7 +74,7 @@ registro
     : REGISTRO LLAVE_IZQ  tipo_var+ LLAVE_DER
     ;
 
-vector
+vector //Ya
     : VECTOR BRAC_IZQ tamano BRAC_DER tipo_id
     ;
 
@@ -134,14 +134,14 @@ caso //Ya
     : CASO PAR_IZQ condicion PAR_DER sentencia*
     ;
 
-condicion
+condicion //Ya
     : condicion AND logico
     | condicion OR logico
     | NOT condicion
     | logico
     ;
 
-logico
+logico //Ya
     : e MENOR e
     | e MAYOR e
     | e IGUAL e
@@ -158,7 +158,7 @@ e
     | FALSE
     ;
 
-paso
+paso //Ya
     : PASO a
     ;
 
@@ -194,7 +194,7 @@ id_complejo
     | id_puntos
     ;
 
-llamada_funcion
+llamada_funcion //Ya
     : ID BRAC_IZQ a_comas BRAC_DER
     ;
 

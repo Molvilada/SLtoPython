@@ -306,9 +306,9 @@ public class SLtoPython extends LenguajeSLBaseListener {
         String variables = ctx.getText();
         char [] aux = variables.toCharArray();
         String imprimir = "";
-        int j=0;
+        int j=3;
         boolean bandera = true;
-        for(int i = 0; i<aux.length;i++){
+        for(int i = 3; i<aux.length;i++){
             if(aux[i] == ':' && aux[i+8]=='o'){
                 j = i+9;
             }
@@ -316,7 +316,7 @@ public class SLtoPython extends LenguajeSLBaseListener {
                 for(;j < i;j++){
                     imprimir += aux[j];
                 }
-                imprimir += "= [";
+                imprimir += " = [";
                 String number = "";
                 int f = i+1;
                 while(aux[f+7]!=']'){
@@ -325,9 +325,9 @@ public class SLtoPython extends LenguajeSLBaseListener {
                 }
                 int result = Integer.parseInt(number);
                 for(f=0;f<result;f++){
-                    imprimir += f + ",";
+                    imprimir += 0 + ",";
                 }
-                imprimir += "10]";
+                imprimir += "0]";
                 break;
             }
         }

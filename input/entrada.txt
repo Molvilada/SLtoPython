@@ -1,11 +1,6 @@
 var
-tot : numerico
-n : numerico
-f : vector [10] numerico
-inicio
-desde k = 1 hasta 10
-{
-    f[k] = 10
-}
-imprimir(f[10])
-fin
+   f : vector [100] numerico
+   inicio
+   f[10] = 10
+   imprimir(f[10])
+   fin
