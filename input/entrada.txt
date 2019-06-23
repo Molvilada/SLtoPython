@@ -4,7 +4,7 @@ n : numerico
 inicio
 cls()
 imprimir_explicacion()
-si (a and b && c){
+si (a<12 and b && c){
     imprimir ("")
 }
 leer (n)

@@ -4,7 +4,7 @@ programa
     : nombre_programa? listas* programa_principal subrutina* EOF
     ;
 
-nombre_programa
+nombre_programa //No lo necesita
     : PROGRAMA ID
     ;
 
@@ -12,7 +12,7 @@ subrutina //Ya
     : SUBRUTINA ID PAR_IZQ lista_argumentos? PAR_DER retorna_s? listas* programa_principal
     ;
 
-lista_argumentos
+lista_argumentos //Ya
     : tipo_var_argumentos PUNTO_COMA lista_argumentos
     | tipo_var_argumentos
     ;
@@ -22,7 +22,7 @@ tipo_var_argumentos //Ya
     ;
 
 
-retorna_s
+retorna_s //No lo necesita
     : RETORNA tipo_id
     ;
 
@@ -32,11 +32,11 @@ listas
     | variables
     ;
 
-tipos
+tipos //No lo necesita
     : TIPOS (tipo PUNTO_COMA?)+
     ;
 
-constantes
+constantes //Ya
     : CONST (constante PUNTO_COMA?)+
     ;
 

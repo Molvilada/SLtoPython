@@ -28,7 +28,26 @@ public class SLtoPython extends LenguajeSLBaseListener {
     @Override public void enterSi(LenguajeSLParser.SiContext ctx) {
         for (int i = 0; i < tabs; i++) System.out.print("\t");
         String condicion = ctx.condicion().getText();
-        System.out.println("if " + condicion + ":");
+        char [] aux_char = condicion.toCharArray();
+        String imprimir = "";
+        for(int i =0; i < condicion.length(); i++){
+            if(i+3 <aux_char.length && aux_char[i] == 'a' && aux_char[i+1] == 'n' && aux_char[i+2] == 'd'){
+                imprimir += " && ";
+                i = i+2;
+            }else if(i+2 < aux_char.length && aux_char[i] == 'o' && aux_char[i+1] == 'r'){
+                imprimir += " || ";
+                i = i+1;
+            }else if(i+2 < aux_char.length && aux_char[i] == '|' && aux_char[i+1] == '|'){
+                imprimir += " || ";
+                i = i+1;
+            }else if(i+2 < aux_char.length && aux_char[i] == '&' && aux_char[i+1] == '&'){
+                imprimir += " && ";
+                i = i+1;
+            }else{
+                imprimir += aux_char[i];
+            }
+        }
+        System.out.println("if " + imprimir + ":");
         tabs_si = tabs;
         tabs++;
     }
@@ -46,7 +65,26 @@ public class SLtoPython extends LenguajeSLBaseListener {
     @Override public void enterSino_si(LenguajeSLParser.Sino_siContext ctx) {
         for (int i = 0; i < tabs_si; i++) System.out.print("\t");
         String condicion = ctx.condicion().getText();
-        System.out.println("elif " + condicion + ":");
+        char [] aux_char = condicion.toCharArray();
+        String imprimir = "";
+        for(int i =0; i < condicion.length(); i++){
+            if(i+3 <aux_char.length && aux_char[i] == 'a' && aux_char[i+1] == 'n' && aux_char[i+2] == 'd'){
+                imprimir += " && ";
+                i = i+2;
+            }else if(i+2 < aux_char.length && aux_char[i] == 'o' && aux_char[i+1] == 'r'){
+                imprimir += " || ";
+                i = i+1;
+            }else if(i+2 < aux_char.length && aux_char[i] == '|' && aux_char[i+1] == '|'){
+                imprimir += " || ";
+                i = i+1;
+            }else if(i+2 < aux_char.length && aux_char[i] == '&' && aux_char[i+1] == '&'){
+                imprimir += " && ";
+                i = i+1;
+            }else{
+                imprimir += aux_char[i];
+            }
+        }
+        System.out.println("elif " + imprimir + ":");
         tabs_si++;
     }
 
@@ -67,7 +105,26 @@ public class SLtoPython extends LenguajeSLBaseListener {
     @Override public void enterMientras(LenguajeSLParser.MientrasContext ctx) {
         for (int i = 0; i < tabs; i++) System.out.print("\t");
         String condicion = ctx.condicion().getText();
-        System.out.println("while " + condicion + ":");
+        char [] aux_char = condicion.toCharArray();
+        String imprimir = "";
+        for(int i =0; i < condicion.length(); i++){
+            if(i+3 <aux_char.length && aux_char[i] == 'a' && aux_char[i+1] == 'n' && aux_char[i+2] == 'd'){
+                imprimir += " && ";
+                i = i+2;
+            }else if(i+2 < aux_char.length && aux_char[i] == 'o' && aux_char[i+1] == 'r'){
+                imprimir += " || ";
+                i = i+1;
+            }else if(i+2 < aux_char.length && aux_char[i] == '|' && aux_char[i+1] == '|'){
+                imprimir += " || ";
+                i = i+1;
+            }else if(i+2 < aux_char.length && aux_char[i] == '&' && aux_char[i+1] == '&'){
+                imprimir += " && ";
+                i = i+1;
+            }else{
+                imprimir += aux_char[i];
+            }
+        }
+        System.out.println("while " + imprimir + ":");
         tabs++;
     }
 
@@ -84,7 +141,26 @@ public class SLtoPython extends LenguajeSLBaseListener {
     @Override public void exitRepetir(LenguajeSLParser.RepetirContext ctx) {
         for (int i = 0; i < tabs; i++) System.out.print("\t");
         String condicion = ctx.condicion().getText();
-        System.out.println("if " + condicion + ":");
+        char [] aux_char = condicion.toCharArray();
+        String imprimir = "";
+        for(int i =0; i < condicion.length(); i++){
+            if(i+3 <aux_char.length && aux_char[i] == 'a' && aux_char[i+1] == 'n' && aux_char[i+2] == 'd'){
+                imprimir += " && ";
+                i = i+2;
+            }else if(i+2 < aux_char.length && aux_char[i] == 'o' && aux_char[i+1] == 'r'){
+                imprimir += " || ";
+                i = i+1;
+            }else if(i+2 < aux_char.length && aux_char[i] == '|' && aux_char[i+1] == '|'){
+                imprimir += " || ";
+                i = i+1;
+            }else if(i+2 < aux_char.length && aux_char[i] == '&' && aux_char[i+1] == '&'){
+                imprimir += " && ";
+                i = i+1;
+            }else{
+                imprimir += aux_char[i];
+            }
+        }
+        System.out.println("if " + imprimir + ":");
         for (int i = 0; i < tabs + 1; i++) System.out.print("\t");
         System.out.println("break");
         tabs--;
@@ -121,12 +197,31 @@ public class SLtoPython extends LenguajeSLBaseListener {
     @Override public void enterCaso(LenguajeSLParser.CasoContext ctx) {
         for (int i = 0; i < tabs_si; i++) System.out.print("\t");
         String condicion = ctx.condicion().getText();
+        char [] aux_char = condicion.toCharArray();
+        String imprimir = "";
+        for(int i =0; i < condicion.length(); i++){
+            if(i+3 <aux_char.length && aux_char[i] == 'a' && aux_char[i+1] == 'n' && aux_char[i+2] == 'd'){
+                imprimir += " && ";
+                i = i+2;
+            }else if(i+2 < aux_char.length && aux_char[i] == 'o' && aux_char[i+1] == 'r'){
+                imprimir += " || ";
+                i = i+1;
+            }else if(i+2 < aux_char.length && aux_char[i] == '|' && aux_char[i+1] == '|'){
+                imprimir += " || ";
+                i = i+1;
+            }else if(i+2 < aux_char.length && aux_char[i] == '&' && aux_char[i+1] == '&'){
+                imprimir += " && ";
+                i = i+1;
+            }else{
+                imprimir += aux_char[i];
+            }
+        }
         if (caso == 0){
-            System.out.println("if " + condicion + ":");
+            System.out.println("if " + imprimir + ":");
             tabs_si = tabs;
             tabs++;
         }else{
-            System.out.println("elif " + condicion + ":");
+            System.out.println("elif " + imprimir + ":");
             tabs_si++;
         }
 

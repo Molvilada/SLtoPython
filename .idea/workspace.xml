@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a12d47a-d3cf-47da-89d4-389401c061a2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/SLtoPython.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SLtoPython.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/LenguajeSL.interp" beforeDir="false" afterPath="$PROJECT_DIR$/gen/LenguajeSL.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/LenguajeSLBaseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/gen/LenguajeSLBaseListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/LenguajeSLBaseVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/gen/LenguajeSLBaseVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/LenguajeSLLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/gen/LenguajeSLLexer.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/LenguajeSLLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/gen/LenguajeSLLexer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/LenguajeSLListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/gen/LenguajeSLListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/LenguajeSLParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/gen/LenguajeSLParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/LenguajeSLVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/gen/LenguajeSLVisitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grammar/LenguajeSL.g4" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/LenguajeSL.g4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/input/entrada.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input/entrada.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSL.interp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSL.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLLexer.interp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SLtoPython/SLtoPython.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SLtoPython/SLtoPython.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SLtoPython.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SLtoPython.java" afterDir="false" />
     </list>
@@ -51,8 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/input/entrada.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
+            <state relative-caret-position="102">
+              <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -60,18 +48,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SLtoPython.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="28" column="42" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
+            <state relative-caret-position="263">
+              <caret line="113" column="49" selection-start-line="113" selection-start-column="49" selection-end-line="113" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1650#1651#0" expanded="true" />
-                <element signature="e#1675#1676#0" expanded="true" />
-                <element signature="e#1948#1949#0" expanded="true" />
-                <element signature="e#1973#1974#0" expanded="true" />
-                <element signature="e#2329#2330#0" expanded="true" />
-                <element signature="e#2351#2352#0" expanded="true" />
-                <element signature="e#5640#5641#0" expanded="true" />
-                <element signature="e#5662#5663#0" expanded="true" />
+                <element signature="e#3442#3443#0" expanded="true" />
+                <element signature="e#3740#3741#0" expanded="true" />
+                <element signature="e#4960#4961#0" expanded="true" />
+                <element signature="e#9954#9955#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -80,8 +64,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grammar/LenguajeSL.g4">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="14" column="11" lean-forward="true" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+            <state relative-caret-position="714">
+              <caret line="42" column="9" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -104,9 +88,10 @@
       <find>repe</find>
       <find>mientra</find>
       <find>asigna</find>
-      <find>condicion</find>
       <find>enterCondi</find>
       <find>retorna_s</find>
+      <find>constan</find>
+      <find>condicion</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -240,7 +225,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24108000" />
+    <option name="totallyTimeSpent" value="25168000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -382,32 +367,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grammar/LenguajeSL.g4">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="14" column="11" lean-forward="true" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+        <state relative-caret-position="714">
+          <caret line="42" column="9" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/input/entrada.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
+        <state relative-caret-position="102">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SLtoPython.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="28" column="42" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
+        <state relative-caret-position="263">
+          <caret line="113" column="49" selection-start-line="113" selection-start-column="49" selection-end-line="113" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1650#1651#0" expanded="true" />
-            <element signature="e#1675#1676#0" expanded="true" />
-            <element signature="e#1948#1949#0" expanded="true" />
-            <element signature="e#1973#1974#0" expanded="true" />
-            <element signature="e#2329#2330#0" expanded="true" />
-            <element signature="e#2351#2352#0" expanded="true" />
-            <element signature="e#5640#5641#0" expanded="true" />
-            <element signature="e#5662#5663#0" expanded="true" />
+            <element signature="e#3442#3443#0" expanded="true" />
+            <element signature="e#3740#3741#0" expanded="true" />
+            <element signature="e#4960#4961#0" expanded="true" />
+            <element signature="e#9954#9955#0" expanded="true" />
           </folding>
         </state>
       </provider>
