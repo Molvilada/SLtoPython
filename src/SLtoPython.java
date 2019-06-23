@@ -127,9 +127,24 @@ public class SLtoPython extends LenguajeSLBaseListener {
     }
 
     @Override public void exitCaso(LenguajeSLParser.CasoContext ctx) {
-
         caso++;
         tabs_si--;
+    }
+
+    @Override public void enterId_complejo(LenguajeSLParser.Id_complejoContext ctx) {
+//        if(ctx.a_comas().a().p().NUMERO() != null){
+//            String numero = ctx.a_comas().a().p().NUMERO().getText();
+//            int numero_n = Integer.parseInt(numero) - 1;
+//            System.out.println("[" + numero + "]");
+//        }
+    }
+
+    @Override public void enterLlamada_funcion(LenguajeSLParser.Llamada_funcionContext ctx) {
+        if(ctx.a_comas().a().p().NUMERO() != null){
+            String numero = ctx.a_comas().a().p().NUMERO().getText();
+            int numero_n = Integer.parseInt(numero) - 1;
+            System.out.println("[" + numero_n + "]");
+        }
     }
 
 

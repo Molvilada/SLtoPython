@@ -289,6 +289,13 @@ public class LenguajeSLBaseVisitor<T> extends AbstractParseTreeVisitor<T> implem
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
+	@Override public T visitLlamada_funcion(LenguajeSLParser.Llamada_funcionContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
 	@Override public T visitA_comas(LenguajeSLParser.A_comasContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}

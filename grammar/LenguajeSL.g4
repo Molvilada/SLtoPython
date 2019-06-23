@@ -189,9 +189,13 @@ retorna
 
 id_complejo
     : ID
-    | ID BRAC_IZQ a_comas BRAC_DER
+    | llamada_funcion
     | ID PAR_IZQ parametros? PAR_DER
     | id_puntos
+    ;
+
+llamada_funcion
+    : ID BRAC_IZQ a_comas BRAC_DER
     ;
 
 a_comas

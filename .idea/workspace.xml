@@ -2,7 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a12d47a-d3cf-47da-89d4-389401c061a2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/LenguajeSL.interp" beforeDir="false" afterPath="$PROJECT_DIR$/gen/LenguajeSL.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/LenguajeSLBaseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/gen/LenguajeSLBaseListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/LenguajeSLBaseVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/gen/LenguajeSLBaseVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/LenguajeSLListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/gen/LenguajeSLListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/LenguajeSLParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/gen/LenguajeSLParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/LenguajeSLVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/gen/LenguajeSLVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grammar/LenguajeSL.g4" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/LenguajeSL.g4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/input/entrada.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input/entrada.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSL.interp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSL.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLBaseListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLBaseListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLBaseVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLBaseVisitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser$AContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser$AContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser$A_comasContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser$A_comasContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser$Id_comasContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser$Id_comasContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser$Id_complejoContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser$Id_complejoContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser$Id_puntosContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser$Id_puntosContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser$Lista_tamanoContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser$Lista_tamanoContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser$PContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser$PContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser$TamanoContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser$TamanoContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLVisitor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SLtoPython/SLtoPython.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SLtoPython/SLtoPython.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SLtoPython.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SLtoPython.java" afterDir="false" />
     </list>
@@ -13,16 +35,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Traductor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+            <state relative-caret-position="238">
+              <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -31,7 +52,7 @@
         <entry file="file://$PROJECT_DIR$/gen/LenguajeSLBaseListener.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
-              <caret line="281" column="4" selection-start-line="281" selection-start-column="4" selection-end-line="287" selection-end-column="72" />
+              <caret line="485" column="95" lean-forward="true" selection-start-line="485" selection-start-column="4" selection-end-line="485" selection-end-column="95" />
             </state>
           </provider>
         </entry>
@@ -39,12 +60,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SLtoPython.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="110" column="15" selection-start-line="110" selection-start-column="15" selection-end-line="110" selection-end-column="15" />
-              <folding>
-                <element signature="e#1818#1819#0" expanded="true" />
-                <element signature="e#1843#1844#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="527">
+              <caret line="145" column="45" selection-start-line="145" selection-start-column="45" selection-end-line="145" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -52,8 +69,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/input/entrada.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="21" column="25" lean-forward="true" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+            <state relative-caret-position="391">
+              <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -61,8 +87,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grammar/LenguajeSL.g4">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1224">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="229">
+              <caret line="191" column="21" selection-start-line="191" selection-start-column="6" selection-end-line="191" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -73,9 +99,15 @@
     <findStrings>
       <find>caso</find>
       <find>‘|’</find>
-      <find>“|”</find>
       <find>&quot;&quot;</find>
       <find>eval</find>
+      <find>compl</find>
+      <find>varia</find>
+      <find>tipo_var</find>
+      <find>“|”</find>
+      <find>‘|‘</find>
+      <find>’</find>
+      <find>LLAMA</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -85,6 +117,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/input/entrada.txt" />
+        <option value="$PROJECT_DIR$/grammar/LenguajeSL.g4" />
         <option value="$PROJECT_DIR$/src/SLtoPython.java" />
       </list>
     </option>
@@ -111,7 +144,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -139,13 +171,13 @@
               <item name="SLtoPython" type="b2602c69:ProjectViewProjectNode" />
               <item name="SLtoPython" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="SLtoPython" type="1a9f42e2:ClassTreeNode" />
+              <item name="Main" type="1a9f42e2:ClassTreeNode" />
             </path>
             <path>
               <item name="SLtoPython" type="b2602c69:ProjectViewProjectNode" />
               <item name="SLtoPython" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Traductor" type="1a9f42e2:ClassTreeNode" />
+              <item name="SLtoPython" type="1a9f42e2:ClassTreeNode" />
             </path>
             <path>
               <item name="SLtoPython" type="b2602c69:ProjectViewProjectNode" />
@@ -161,6 +193,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -207,12 +240,13 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1561251784688</updated>
-      <workItem from="1561251786045" duration="3112000" />
+      <workItem from="1561251786045" duration="4687000" />
+      <workItem from="1561299997251" duration="5017000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3112000" />
+    <option name="totallyTimeSpent" value="9704000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -227,38 +261,71 @@
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="Image Layers" />
-      <window_info id="Capture Tool" />
-      <window_info id="UI Designer" />
-      <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32974428" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Tool Output" weight="0.32974428" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.32974428" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" weight="0.32974428" />
-      <window_info anchor="bottom" id="ANTLR Preview" weight="0.32974428" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32974428" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32974428" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32974428" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32974428" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Tool Output" order="9" weight="0.32974428" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32974428" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Version Control" order="13" weight="0.32974428" />
+      <window_info anchor="bottom" id="ANTLR Preview" order="14" weight="0.95962316" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Designer" order="0" />
+      <window_info id="Image Layers" order="1" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.25" />
+      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="0" weight="0.32974428" />
+      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Tool Output" order="2" weight="0.32974428" />
+      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="4" weight="0.32974428" />
+      <window_info anchor="bottom" id="Database Changes" order="5" />
+      <window_info anchor="bottom" id="Version Control" order="6" weight="0.32974428" />
+      <window_info anchor="bottom" id="ANTLR Preview" order="7" weight="0.32974428" />
+      <window_info anchor="bottom" id="Message" order="8" />
+      <window_info anchor="bottom" id="Find" order="9" />
+      <window_info active="true" anchor="bottom" id="Run" order="10" visible="true" weight="0.32974428" />
+      <window_info anchor="bottom" id="Debug" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="14" weight="0.32974428" />
+      <window_info anchor="right" id="Maven" order="0" />
+      <window_info anchor="right" id="Palette" order="1" />
+      <window_info anchor="right" id="Capture Analysis" order="2" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -291,6 +358,20 @@
     <entry file="file://$PROJECT_DIR$/out/production/SLtoPython/LenguajeSL.tokens">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Traductor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grammar/LenguajeSL.g4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="191" column="21" selection-start-line="191" selection-start-column="6" selection-end-line="191" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -298,42 +379,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grammar/LenguajeSL.g4">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1224">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/input/entrada.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="21" column="25" lean-forward="true" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+        <state relative-caret-position="391">
+          <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gen/LenguajeSLBaseListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="281" column="4" selection-start-line="281" selection-start-column="4" selection-end-line="287" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Traductor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <caret line="485" column="95" lean-forward="true" selection-start-line="485" selection-start-column="4" selection-end-line="485" selection-end-column="95" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SLtoPython.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="110" column="15" selection-start-line="110" selection-start-column="15" selection-end-line="110" selection-end-column="15" />
-          <folding>
-            <element signature="e#1818#1819#0" expanded="true" />
-            <element signature="e#1843#1844#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="527">
+          <caret line="145" column="45" selection-start-line="145" selection-start-column="45" selection-end-line="145" selection-end-column="45" />
         </state>
       </provider>
     </entry>

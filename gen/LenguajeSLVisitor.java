@@ -244,6 +244,12 @@ public interface LenguajeSLVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitId_complejo(LenguajeSLParser.Id_complejoContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link LenguajeSLParser#llamada_funcion}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitLlamada_funcion(LenguajeSLParser.Llamada_funcionContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link LenguajeSLParser#a_comas}.
 	 * @param ctx the parse tree
 	 * @return the visitor result

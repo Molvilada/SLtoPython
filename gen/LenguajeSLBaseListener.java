@@ -483,6 +483,18 @@ public class LenguajeSLBaseListener implements LenguajeSLListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterLlamada_funcion(LenguajeSLParser.Llamada_funcionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitLlamada_funcion(LenguajeSLParser.Llamada_funcionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterA_comas(LenguajeSLParser.A_comasContext ctx) { }
 	/**
 	 * {@inheritDoc}

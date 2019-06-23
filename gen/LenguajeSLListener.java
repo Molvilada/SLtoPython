@@ -397,6 +397,16 @@ public interface LenguajeSLListener extends ParseTreeListener {
 	 */
 	void exitId_complejo(LenguajeSLParser.Id_complejoContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link LenguajeSLParser#llamada_funcion}.
+	 * @param ctx the parse tree
+	 */
+	void enterLlamada_funcion(LenguajeSLParser.Llamada_funcionContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link LenguajeSLParser#llamada_funcion}.
+	 * @param ctx the parse tree
+	 */
+	void exitLlamada_funcion(LenguajeSLParser.Llamada_funcionContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link LenguajeSLParser#a_comas}.
 	 * @param ctx the parse tree
 	 */
