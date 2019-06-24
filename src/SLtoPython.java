@@ -332,6 +332,9 @@ public class SLtoPython extends LenguajeSLBaseListener {
                     variables2.put(imprimir, "registro");
                     System.out.println("class" + imprimir + ":");
                     tabs++;
+                    global = global+10;
+                    imprimir="";
+                    tabs--;
                 }else if(aux[i+1]=='v'){
                     String tipo = "";
                     for(int f = i+8;f<aux.length;f++){
