@@ -49,7 +49,7 @@ public class SLtoPython extends LenguajeSLBaseListener {
         tabs_si = tabs;
         tabs++;
     }
-    
+
     @Override public void exitSi(LenguajeSLParser.SiContext ctx) {
         tabs--;
 
@@ -301,7 +301,9 @@ public class SLtoPython extends LenguajeSLBaseListener {
 
     @Override
     public void enterVariables(LenguajeSLParser.VariablesContext ctx) {
+        for (int i = 0; i < tabs; i++) System.out.print("\t");
         String variables = ctx.getText();
+        System.out.println(variables);
         char [] aux = variables.toCharArray();
         System.out.println(variables);
         String imprimir = "";
@@ -326,6 +328,10 @@ public class SLtoPython extends LenguajeSLBaseListener {
                     variables2.put(imprimir,"logico");
                     global = global+8;
                     imprimir="";
+                }else if(aux[i+1]=='r'){
+                    variables2.put(imprimir, "registro");
+                    System.out.println("class" + imprimir + ":");
+                    tabs++;
                 }else if(aux[i+1]=='v'){
                     String tipo = "";
                     for(int f = i+8;f<aux.length;f++){
@@ -370,6 +376,8 @@ public class SLtoPython extends LenguajeSLBaseListener {
             }
         }
     }
+
+
 }
 
 

@@ -1,5 +1,7 @@
 var
-    f : numerico
+    f : registro{
+        z : logico
+    }
     l : logico
     z : cadena
 	x : vector [1000] logico
