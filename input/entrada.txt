@@ -1,6 +1,16 @@
 var
-   f : vector [100] numerico
-   inicio
-   f[10] = 10
-   imprimir(f[10])
-   fin
+    f : numerico
+    l : logico
+    z : cadena
+	x : vector [1000] logico
+	z : vector [10] numerico
+	y : vector [10]  logico
+inicio
+    leer(f)
+fin
+
+subrutina pi(N : vector[10] numerico) retorna numerico
+inicio
+
+	retorna (3.141516*N[1])
+fin

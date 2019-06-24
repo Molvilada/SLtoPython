@@ -171,6 +171,10 @@ expresion
     : a
     | id_complejo
     | LLAVE_IZQ lista_llaves LLAVE_DER
+    | TRUE
+    | FALSE
+    | SI
+    | NO
     ;
 
 lista_llaves

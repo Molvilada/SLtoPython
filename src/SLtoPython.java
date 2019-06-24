@@ -3,6 +3,7 @@ import org.antlr.v4.runtime.tree.ErrorNode;
 import org.antlr.v4.runtime.tree.TerminalNode;
 
 import javax.xml.bind.SchemaOutputResolver;
+import java.util.Hashtable;
 import java.util.Stack;
 
 public class SLtoPython extends LenguajeSLBaseListener {
@@ -10,11 +11,8 @@ public class SLtoPython extends LenguajeSLBaseListener {
     private static int tabs = 0;
     private static int tabs_si = 0;
     private static int caso = 0;
-    private static String enterTipo_var_argumentos = "";
+    public static Hashtable<String, String> variables2 = new Hashtable<String, String>();
 
-//    @Override public void enterSentencia(LenguajeSLParser.SentenciaContext ctx) {
-//
-//    }
     @Override public void enterConstantes(LenguajeSLParser.ConstantesContext ctx) {
         System.out.println(ctx.getText());
     }
@@ -51,12 +49,7 @@ public class SLtoPython extends LenguajeSLBaseListener {
         tabs_si = tabs;
         tabs++;
     }
-
-    /*@Override
-    /public void enterCondicion(LenguajeSLParser.CondicionContext ctx) {
-        System.out.print(ctx.condicion().children);
-    }*/
-
+    
     @Override public void exitSi(LenguajeSLParser.SiContext ctx) {
         tabs--;
 
@@ -179,7 +172,12 @@ public class SLtoPython extends LenguajeSLBaseListener {
             System.out.println("print(" + parametros + ")");
         }
         else if (id.equals("leer")){
-            System.out.println(parametros + "=input()");
+            String tipo = variables2.get(parametros);
+            if(tipo == "numerico"){
+                System.out.println(parametros + " = int(input())");
+            }else{
+                System.out.println(parametros + " = input()");
+            }
         }else{
             System.out.println(id + "(" + parametros + ")");
         }
@@ -305,33 +303,72 @@ public class SLtoPython extends LenguajeSLBaseListener {
     public void enterVariables(LenguajeSLParser.VariablesContext ctx) {
         String variables = ctx.getText();
         char [] aux = variables.toCharArray();
+        System.out.println(variables);
         String imprimir = "";
-        int j=3;
-        boolean bandera = true;
+        int global = 3;
+        String number = "";
+
         for(int i = 3; i<aux.length;i++){
-            if(aux[i] == ':' && aux[i+8]=='o'){
-                j = i+9;
-            }
-            if(i + 6 < aux.length && aux[i] == ':' && aux[i+6]=='r' && bandera ){
-                for(;j < i;j++){
+            if(aux[i]==':') {
+                for (int j = global; j < i; j++) {
                     imprimir += aux[j];
+                    global = j;
                 }
-                imprimir += " = [";
-                String number = "";
-                int f = i+1;
-                while(aux[f+7]!=']'){
-                    number += aux[f+7];
-                    f++;
+                if(aux[i+1]=='n'){
+                    variables2.put(imprimir,"numerico");
+                    global = global+10;
+                    imprimir="";
+                }else if(aux[i+1]=='c'){
+                    variables2.put(imprimir,"cadena");
+                    global = global+8;
+                    imprimir="";
+                }else if (aux[i+1]=='l'){
+                    variables2.put(imprimir,"logico");
+                    global = global+8;
+                    imprimir="";
+                }else if(aux[i+1]=='v'){
+                    String tipo = "";
+                    for(int f = i+8;f<aux.length;f++){
+                        if(aux[f]!=']'){
+                            number += aux[f];
+                        }else{
+                            if(aux[f+1]=='c'){
+                                tipo = "cadena";
+                            }else if(aux[f+1]=='n'){
+                                tipo = "numerico";
+                            }else if(aux[f+1]=='l'){
+                                tipo = "logico";
+                            }
+                            break;
+                        }
+                    }
+                    switch (tipo){
+                        case "cadena":
+                            System.out.println(imprimir +" = []");
+                            System.out.println("for i in range(" + number +")");
+                            System.out.println("    " + imprimir + "[i] = " + '"' + '"');
+                            global = global+ 16 + number.length();;
+                            break;
+                        case "numerico":
+                            System.out.println(imprimir +" = []");
+                            System.out.println("for i in range(" + number +")");
+                            System.out.println("    " + imprimir + "[i] = 0");
+                            global = global+ 18 + number.length();;
+                            break;
+                        case "logico":
+                            System.out.println(imprimir +" = []");
+                            System.out.println("for i in range(" + number +")");
+                            System.out.println("    " + imprimir + "[i] = True");
+                            global = global + 16 + number.length();
+                            break;
+                            default:
+                                break;
+                    }
+                    imprimir = "";
+                    number = "";
                 }
-                int result = Integer.parseInt(number);
-                for(f=0;f<result;f++){
-                    imprimir += 0 + ",";
-                }
-                imprimir += "0]";
-                break;
             }
         }
-        System.out.println(imprimir);
     }
 }
 
