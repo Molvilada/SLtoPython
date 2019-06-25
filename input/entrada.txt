@@ -3,16 +3,19 @@ var
         z : logico
     }
     l : logico
-    z : cadena
+    a : cadena
 	x : vector [1000] logico
 	z : vector [10] numerico
 	y : vector [10]  logico
+	n : numerico
 inicio
     leer(f)
+    leer(n)
+    z[1] = 0
+    imprimir(pi(z))
 fin
 
 subrutina pi(N : vector[10] numerico) retorna numerico
 inicio
-
 	retorna (3.141516*N[1])
 fin

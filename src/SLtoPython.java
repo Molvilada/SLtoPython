@@ -3,6 +3,7 @@ import org.antlr.v4.runtime.tree.ErrorNode;
 import org.antlr.v4.runtime.tree.TerminalNode;
 
 import javax.xml.bind.SchemaOutputResolver;
+import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.Stack;
 
@@ -12,6 +13,23 @@ public class SLtoPython extends LenguajeSLBaseListener {
     private static int tabs_si = 0;
     private static int caso = 0;
     public static Hashtable<String, String> variables2 = new Hashtable<String, String>();
+    public static ArrayList<String> subrutinas = new ArrayList<>();
+
+    public void enterPrograma(LenguajeSLParser.ProgramaContext ctx) {
+
+    }
+
+    public void exitPrograma(LenguajeSLParser.ProgramaContext ctx) {
+
+    }
+
+    public void enterPrograma_principal(LenguajeSLParser.Programa_principalContext ctx) {
+        System.out.println(ctx.getText());
+        System.out.println();
+    }
+
+    public void exitPrograma_principal(LenguajeSLParser.Programa_principalContext ctx) {
+    }
 
     @Override public void enterConstantes(LenguajeSLParser.ConstantesContext ctx) {
         System.out.println(ctx.getText());
@@ -240,11 +258,11 @@ public class SLtoPython extends LenguajeSLBaseListener {
     }
 
     @Override public void enterLlamada_funcion(LenguajeSLParser.Llamada_funcionContext ctx) {
-        if(ctx.a_comas().a().p().NUMERO() != null){
-            String numero = ctx.a_comas().a().p().NUMERO().getText();
-            int numero_n = Integer.parseInt(numero) - 1;
-            System.out.println("[" + numero_n + "]");
-        }
+//        if(ctx.a_comas().a().p().NUMERO() != null){
+//            String numero = ctx.a_comas().a().p().NUMERO().getText();
+//            int numero_n = Integer.parseInt(numero) - 1;
+//            System.out.println("[" + numero_n + "]");
+//        }
     }
 
     @Override
@@ -278,7 +296,7 @@ public class SLtoPython extends LenguajeSLBaseListener {
     public void enterSubrutina(LenguajeSLParser.SubrutinaContext ctx) {
         for (int i = 0; i < tabs; i++) System.out.print("\t");
         if(ctx.lista_argumentos()!=null){
-            String aux = ctx.ID().getText() + "(" + ctx.lista_argumentos().getText();
+            String aux = ctx.lista_argumentos().getText();
             char [] copia_aux = aux.toCharArray();
             String imprimir = "";
             boolean bandera = true;
@@ -292,7 +310,8 @@ public class SLtoPython extends LenguajeSLBaseListener {
                     imprimir += copia_aux[i];
                 }
             }
-            System.out.print("def " + ctx.ID().getText() + "(" + imprimir + "):");
+
+            System.out.println("def " + ctx.ID().getText() + "(" + imprimir + "):");
         }else{
             System.out.println("def " + ctx.ID().getText() + "():");
         }
@@ -354,20 +373,20 @@ public class SLtoPython extends LenguajeSLBaseListener {
                     switch (tipo){
                         case "cadena":
                             System.out.println(imprimir +" = []");
-                            System.out.println("for i in range(" + number +")");
-                            System.out.println("    " + imprimir + "[i] = " + '"' + '"');
+                            System.out.println("for i in range(" + number +"):");
+                            System.out.println("    " + imprimir + ".append('')");
                             global = global+ 16 + number.length();;
                             break;
                         case "numerico":
                             System.out.println(imprimir +" = []");
-                            System.out.println("for i in range(" + number +")");
-                            System.out.println("    " + imprimir + "[i] = 0");
+                            System.out.println("for i in range(" + number +"):");
+                            System.out.println("    " + imprimir + ".append(0)");
                             global = global+ 18 + number.length();;
                             break;
                         case "logico":
                             System.out.println(imprimir +" = []");
-                            System.out.println("for i in range(" + number +")");
-                            System.out.println("    " + imprimir + "[i] = True");
+                            System.out.println("for i in range(" + number +"):");
+                            System.out.println("    " + imprimir + ".append(True)");
                             global = global + 16 + number.length();
                             break;
                             default:
@@ -379,8 +398,6 @@ public class SLtoPython extends LenguajeSLBaseListener {
             }
         }
     }
-
-
 }
 
 
