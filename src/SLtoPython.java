@@ -42,19 +42,11 @@ public class SLtoPython extends LenguajeSLBaseListener {
                 }
             }
         }else if(ctx.expresion().getText().startsWith("{")){
-            System.out.print(ctx.id_complejo().getText() + " = ");
-            char [] aux = ctx.expresion().getText().toCharArray();
-            for(int i =0; i< aux.length;i++){
-                if (aux[i] !='{'&& aux[i]!= '}'){
-                    System.out.print(aux[i]);
-                } else if (aux[i] =='{') {
-                    System.out.print('[');
-                }else if(aux[i]=='}'){
-                    System.out.println(']');
-                }
-            }
+            String llaves = ctx.expresion().getText().replaceAll("\\{", "[");
+            llaves = llaves.replaceAll("\\}", "]");
+            System.out.println(ctx.id_complejo().getText() + " = " + llaves);
         }else{
-            System.out.print(contexto);
+            System.out.println(contexto);
         }
 
     }
