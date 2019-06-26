@@ -23,24 +23,32 @@ public class SLtoPython extends LenguajeSLBaseListener {
         for (int i = 0; i < tabs; i++) System.out.print("\t");
         String contexto = ctx.getText();
         if(ctx.getText().contains(".")){
-            String [] aux = contexto.split("=");
-            String puntos = aux[0];
-            String [] aux2 = puntos.split("[.]");
-            String cadena = "";
-            for (int i = 1; i < aux2.length; i++){
-                cadena += "['" + aux2[i] + "']";
-                System.out.printf("r"+ cadena);
-                if (i < aux2.length - 1){
-                    System.out.println("= {}");
-                }else{
-                    System.out.println("= " + aux[1]);
+            String [] puntos_aux = contexto.split("[-+]?[0-9]*\\.[0-9]*");
+            if(puntos_aux.length > 1){
+                System.out.println(contexto);
+            }else {
+                String[] aux = contexto.split("=");
+                String puntos = aux[0];
+                String[] aux2 = puntos.split("[.]");
+                String cadena = "";
+                for (int i = 1; i < aux2.length; i++) {
+                    cadena += "['" + aux2[i] + "']";
+                    System.out.printf("r" + cadena);
+                    if (i < aux2.length - 1) {
+                        System.out.println("= {}");
+                    } else {
+                        System.out.println("= " + aux[1]);
+                    }
                 }
             }
-
+        }else if(ctx.expresion().getText().startsWith("{")){
+            System.out.print(ctx.id_complejo().getText() + " = ");
         }else{
-            System.out.println(contexto);
+            System.out.print(contexto);
         }
+
     }
+
 
     @Override
     public void enterTipos(LenguajeSLParser.TiposContext ctx) {
@@ -229,12 +237,25 @@ public class SLtoPython extends LenguajeSLBaseListener {
             System.out.println("print(" + parametros + ")");
         }
         else if (id.equals("leer")){
-            String tipo = variables2.get(parametros);
-            if(tipo == "numerico"){
-                System.out.println(parametros + " = int(input())");
-            }else{
-                System.out.println(parametros + " = input()");
+            String [] parametros_aux = parametros.split(",");
+//            System.out.println(parametros_aux[0]);
+            for(int i = 0; i < parametros_aux.length; i++){
+                String tipo;
+                if(parametros_aux[i].contains("[")){
+                    String [] parametros_aux2 = parametros_aux[i].split("\\[");
+                    tipo = variables2.get(parametros_aux2[0]);
+                }else{
+                    tipo = variables2.get(parametros_aux[i]);
+                }
+                if(tipo == null){
+                    System.out.println(parametros_aux[i] + " = input()");
+                }else if (tipo.equals("numerico")){
+                    System.out.println(parametros_aux[i] + " = int(input())");
+                }else{
+                    System.out.println(parametros_aux[i] + " = input()");
+                }
             }
+
         }else{
             for(int i = 0; i< parametros.length(); i++){
 
@@ -259,16 +280,16 @@ public class SLtoPython extends LenguajeSLBaseListener {
         String imprimir = "";
         for(int i =0; i < condicion.length(); i++){
             if(i+3 <aux_char.length && aux_char[i] == 'a' && aux_char[i+1] == 'n' && aux_char[i+2] == 'd'){
-                imprimir += " && ";
+                imprimir += " and ";
                 i = i+2;
             }else if(i+2 < aux_char.length && aux_char[i] == 'o' && aux_char[i+1] == 'r'){
-                imprimir += " || ";
+                imprimir += " or ";
                 i = i+1;
             }else if(i+2 < aux_char.length && aux_char[i] == '|' && aux_char[i+1] == '|'){
-                imprimir += " || ";
+                imprimir += " or ";
                 i = i+1;
             }else if(i+2 < aux_char.length && aux_char[i] == '&' && aux_char[i+1] == '&'){
-                imprimir += " && ";
+                imprimir += " and ";
                 i = i+1;
             }else{
                 imprimir += aux_char[i];
@@ -313,9 +334,9 @@ public class SLtoPython extends LenguajeSLBaseListener {
             System.out.print("\t");
         }
         if (ctx.paso()!= null){
-            System.out.println("for " + ctx.ID().getText()+" in range(" + ctx.a().get(0).getText()+ "," + ctx.a().get(1).getText() + "," + ctx.paso().a().getText() + "):");
+            System.out.println("for " + ctx.ID().getText()+" in range(" + ctx.a().get(0).getText()+ "," + ctx.a().get(1).getText() + "+1," + ctx.paso().a().getText() + "):");
         }else{
-            System.out.println("for " + ctx.ID().getText()+" in range(" + ctx.a().get(0).getText()+ "," + ctx.a().get(1).getText() + "):");
+            System.out.println("for " + ctx.ID().getText()+" in range(" + ctx.a().get(0).getText()+ "," + ctx.a().get(1).getText() + "+1):");
         }
         tabs++;
     }
@@ -525,7 +546,8 @@ public class SLtoPython extends LenguajeSLBaseListener {
         for (int i = 0; i < tabs; i++) System.out.print("\t");
         String variables = ctx.id_comas().getText();
         String tipo = ctx.tipo_id().getText();
-        System.out.println("VARIABLES: " +variables);
+
+//        System.out.println("VARIABLES: " +variables);
         if(tipo.contains("registro")){
             tipo = "registro";
         }else if (tipo.contains("vector")){
@@ -536,12 +558,14 @@ public class SLtoPython extends LenguajeSLBaseListener {
 
         String [] v_comas = variables.split(",");
         for(int i = 0; i < v_comas.length; i++){
-            variables2.put(v_comas[i],tipo);
+            String [] tipo_aux = ctx.tipo_id().getText().split("\\].*?");
+            String tipo_aux2 = tipo_aux[tipo_aux.length-1];
             if(tipo == "vector"){
+                variables2.put(v_comas[i],tipo_aux2);
                 String [] number = ctx.tipo_id().getText().split("\\[.*?");
                 number = number[1].split("\\].*?");
                 System.out.println(v_comas[i] +" = []");
-                if (number[0].matches("[0-9]*")){
+                if (number[0].matches("([a-zA-Z_]+[a-zA-Z0-9_]*|[-+]?[0-9]+\\.?[0-9]*)")){
                     System.out.println("for i in range(" + number[0] +"):");
                     if(ctx.tipo_id().getText().contains("numerico")){
                         System.out.println("    " + v_comas[i] + ".append(0)");
@@ -553,6 +577,7 @@ public class SLtoPython extends LenguajeSLBaseListener {
                 }
 
             }else if(tipo == "matriz"){
+                variables2.put(v_comas[i],tipo_aux2);
                 String [] numbers = ctx.tipo_id().getText().split("\\[.*?");
                 numbers = numbers[1].split("\\].*?");
                 numbers = numbers[0].split(",");
@@ -570,22 +595,34 @@ public class SLtoPython extends LenguajeSLBaseListener {
                         matriz = variables;
                     }
                     System.out.println(matriz + " = []");
-                    if (numbers[j].matches("[0-9]*")){
+                    if (numbers[j].matches("([a-zA-Z_]+[a-zA-Z0-9_]*|[-+]?[0-9]+\\.?[0-9]*)")){
                         System.out.println("for i in range(" + numbers[j] +"):");
                         System.out.println("    " + matriz + append);
-
-
+                    }else{
+                        System.out.println(matriz + append);
                     }
                     append = ".append(" + matriz + ")";
                     matriz = "aux" + Integer.toString(j);
                 }
+            }else{
+                variables2.put(v_comas[i],tipo);
             }
         }
 
-        System.out.println(variables2.toString());
+//        System.out.println(variables2.toString());
     }
 
     public void exitTipo_var(LenguajeSLParser.Tipo_varContext ctx) {
+    }
+
+    public void enterLlave(LenguajeSLParser.LlaveContext ctx) {
+        String [] llaves = ctx.a_comas().getText().split(",");
+        System.out.print("[" + llaves[0]);
+
+        for(int i = 1; i < llaves.length; i++){
+            System.out.print("," + llaves[i]);
+        }
+
     }
 }
 

@@ -185,7 +185,7 @@ lista_llaves
 
 llave
     : LLAVE_IZQ  llave LLAVE_DER
-    | a_comas
+    | a_comas?
     ;
 
 retorna //Ya
