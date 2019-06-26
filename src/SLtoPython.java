@@ -370,155 +370,222 @@ public class SLtoPython extends LenguajeSLBaseListener {
 
     @Override
     public void enterVariables(LenguajeSLParser.VariablesContext ctx) {
+//        for (int i = 0; i < tabs; i++) System.out.print("\t");
+//        String variables = ctx.getText();
+//        char [] aux = variables.toCharArray();
+//        String imprimir = "";
+//        int global = 3;
+//        String number = "";
+//        for(int i = 3; i<aux.length;i++){
+//            if(aux[i]==':') {
+//                for (int j = global; j < i; j++) {
+//                    imprimir += aux[j];
+//                    global = j;
+//                }
+//                if(aux[i+1]=='n'){
+//                    variables2.put(imprimir,"numerico");
+//                    global = global+10;
+//                    imprimir="";
+//                }else if(aux[i+1]=='c'){
+//                    variables2.put(imprimir,"cadena");
+//                    global = global+8;
+//                    imprimir="";
+//                }else if (aux[i+1]=='l'){
+//                    variables2.put(imprimir,"logico");
+//                    global = global+8;
+//                    imprimir="";
+//                }else if(aux[i+1]=='v'){
+//                    String tipo = "";
+//                    for(int f = i+8;f<aux.length;f++){
+//                        if(aux[f]!=']'){
+//                            number += aux[f];
+//                        }else{
+//                            if(aux[f+1]=='c'){
+//                                tipo = "cadena";
+//                            }else if(aux[f+1]=='n'){
+//                                tipo = "numerico";
+//                            }else if(aux[f+1]=='l'){
+//                                tipo = "logico";
+//                            }
+//                            break;
+//                        }
+//                    }
+//                    switch (tipo){
+//                        case "cadena":
+//                            System.out.println(imprimir +" = []");
+//                            System.out.println("for i in range(" + number +"):");
+//                            System.out.println("    " + imprimir + ".append('')");
+//                            global = global+ 16 + number.length();;
+//                            break;
+//                        case "numerico":
+//                            System.out.println(imprimir +" = []");
+//                            System.out.println("for i in range(" + number +"):");
+//                            System.out.println("    " + imprimir + ".append(0)");
+//                            global = global+ 18 + number.length();;
+//                            break;
+//                        case "logico":
+//                            System.out.println(imprimir +" = []");
+//                            System.out.println("for i in range(" + number +"):");
+//                            System.out.println("    " + imprimir + ".append(True)");
+//                            global = global + 16 + number.length();
+//                            break;
+//                            default:
+//                                break;
+//                    }
+//                    imprimir = "";
+//                    number = "";
+//                }else if(aux[i+1]=='m'){
+//                    String tipo = "";
+//                    ArrayList<String> tamannos = new ArrayList<>();
+//                    for(int f=i+8;f<aux.length;f++){
+//                        if(aux[f]=='l' ){
+//                            tipo = "logico";
+//                            break;
+//                        }else if(aux[f]==',' || aux[f]==']'){
+//                            tamannos.add(number);
+//                            number = "";
+//                        }else if(aux[f]=='c') {
+//                            tipo = "cadena";
+//                            break;
+//                        }else if(aux[f]=='n'){
+//                            tipo = "numerico";
+//                            break;
+//                        }else if(aux[f]!=','){
+//                            number += aux[f];
+//                        }
+//                    }switch (tipo){
+//                        case "cadena":
+//                            System.out.println("Contenido de tamannos");
+//                            for(int z = 0; z<tamannos.size();z++){
+//                                System.out.print(tamannos.get(z)+" ");
+//                            }
+//                            System.out.println(imprimir +" = []");
+//                            for(int k=0;k<tamannos.size();k++){
+//                                System.out.println("aux"+k +"= []");
+//                            }
+//                            System.out.println("for i in range(" + tamannos.get(tamannos.size()-1) +"):");
+//                            System.out.println("    " + "aux0" + ".append('')");
+//                            for(int k=tamannos.size()-2;k>0;k--){
+//                                System.out.println("for i in range(" + tamannos.get(k) +"):");
+//                                System.out.println("    " + "aux"+(tamannos.size()-k-1) + ".append(aux" + (tamannos.size()-k-2)+ ")");
+//                            }
+//                            System.out.println("for i in range(" + tamannos.get(0) +"):");
+//                            System.out.println("    " + imprimir + ".append(aux"+(tamannos.size()-2)+")");
+//                            global = global+ 16 + number.length();;
+//                            break;
+//                        case "numerico":
+//                            System.out.println("Contenido de tamannos");
+//                            for(int z = 0; z<tamannos.size();z++){
+//                                System.out.print(tamannos.get(z)+" ");
+//                            }
+//                            System.out.println(imprimir +" = []");
+//                            for(int k=0;k<tamannos.size();k++){
+//                                System.out.println("aux"+k +"= []");
+//                            }
+//                            System.out.println("for i in range(" + tamannos.get(tamannos.size()-1) +"):");
+//                            System.out.println("    " + "aux0" + ".append(0)");
+//                            for(int k=tamannos.size()-2;k>0;k--){
+//                                System.out.println("for i in range(" + tamannos.get(k) +"):");
+//                                System.out.println("    " + "aux"+(tamannos.size()-k-1) + ".append(aux" + (tamannos.size()-k-2)+ ")");
+//                            }
+//                            System.out.println("for i in range(" + tamannos.get(0) +"):");
+//                            System.out.println("    " + imprimir + ".append(aux"+(tamannos.size()-2)+")");
+//                            global = global+ 16 + number.length();;
+//                            break;
+//                        case "logico":
+//                            System.out.println("Contenido de tamannos");
+//                            for(int z = 0; z<tamannos.size();z++){
+//                                System.out.print(tamannos.get(z)+" ");
+//                            }
+//                            System.out.println(imprimir +" = []");
+//                            for(int k=0;k<tamannos.size();k++){
+//                                System.out.println("aux"+k +"= []");
+//                            }
+//                            System.out.println("for i in range(" + tamannos.get(tamannos.size()-1) +"):");
+//                            System.out.println("    " + "aux0" + ".append(True)");
+//                            for(int k=tamannos.size()-2;k>0;k--){
+//                                System.out.println("for i in range(" + tamannos.get(k) +"):");
+//                                System.out.println("    " + "aux"+(tamannos.size()-k-1) + ".append(aux" + (tamannos.size()-k-2)+ ")");
+//                            }
+//                            System.out.println("for i in range(" + tamannos.get(0) +"):");
+//                            System.out.println("    " + imprimir + ".append(aux"+(tamannos.size()-2)+")");
+//                            global = global+ 16 + number.length();
+//                            break;
+//                        default:
+//                            break;
+//                    }
+//                    imprimir = "";
+//                    number = "";
+//                }
+//            }
+//        }
+    }
+
+    public void enterTipo_var(LenguajeSLParser.Tipo_varContext ctx) {
         for (int i = 0; i < tabs; i++) System.out.print("\t");
-        String variables = ctx.getText();
-        char [] aux = variables.toCharArray();
-        String imprimir = "";
-        int global = 3;
-        String number = "";
-        for(int i = 3; i<aux.length;i++){
-            if(aux[i]==':') {
-                for (int j = global; j < i; j++) {
-                    imprimir += aux[j];
-                    global = j;
+        String variables = ctx.id_comas().getText();
+        String tipo = ctx.tipo_id().getText();
+        System.out.println("VARIABLES: " +variables);
+        if(tipo.contains("registro")){
+            tipo = "registro";
+        }else if (tipo.contains("vector")){
+            tipo = "vector";
+        }else if (tipo.contains("matriz")){
+            tipo = "matriz";
+        }
+
+        String [] v_comas = variables.split(",");
+        for(int i = 0; i < v_comas.length; i++){
+            variables2.put(v_comas[i],tipo);
+            if(tipo == "vector"){
+                String [] number = ctx.tipo_id().getText().split("\\[.*?");
+                number = number[1].split("\\].*?");
+                System.out.println(v_comas[i] +" = []");
+                if (number[0].matches("[0-9]*")){
+                    System.out.println("for i in range(" + number[0] +"):");
+                    if(ctx.tipo_id().getText().contains("numerico")){
+                        System.out.println("    " + v_comas[i] + ".append(0)");
+                    }else if (ctx.tipo_id().getText().contains("cadena")){
+                        System.out.println("    " + v_comas[i] + ".append('')");
+                    }else if  (ctx.tipo_id().getText().contains("logico")){
+                        System.out.println("    " + v_comas[i] + ".append(False)");
+                    }
                 }
-                if(aux[i+1]=='n'){
-                    variables2.put(imprimir,"numerico");
-                    global = global+10;
-                    imprimir="";
-                }else if(aux[i+1]=='c'){
-                    variables2.put(imprimir,"cadena");
-                    global = global+8;
-                    imprimir="";
-                }else if (aux[i+1]=='l'){
-                    variables2.put(imprimir,"logico");
-                    global = global+8;
-                    imprimir="";
-                }else if(aux[i+1]=='v'){
-                    String tipo = "";
-                    for(int f = i+8;f<aux.length;f++){
-                        if(aux[f]!=']'){
-                            number += aux[f];
-                        }else{
-                            if(aux[f+1]=='c'){
-                                tipo = "cadena";
-                            }else if(aux[f+1]=='n'){
-                                tipo = "numerico";
-                            }else if(aux[f+1]=='l'){
-                                tipo = "logico";
-                            }
-                            break;
-                        }
+
+            }else if(tipo == "matriz"){
+                String [] numbers = ctx.tipo_id().getText().split("\\[.*?");
+                numbers = numbers[1].split("\\].*?");
+                numbers = numbers[0].split(",");
+                String append = "";
+                String matriz = "aux";
+                if(ctx.tipo_id().getText().contains("numerico")){
+                    append = ".append(0)";
+                }else if (ctx.tipo_id().getText().contains("cadena")){
+                    append = ".append('')";
+                }else if  (ctx.tipo_id().getText().contains("logico")){
+                    append = ".append(False)";
+                }
+                for(int j = numbers.length-1; j>=0;j--){
+                    if (j == 0){
+                        matriz = variables;
                     }
-                    switch (tipo){
-                        case "cadena":
-                            System.out.println(imprimir +" = []");
-                            System.out.println("for i in range(" + number +"):");
-                            System.out.println("    " + imprimir + ".append('')");
-                            global = global+ 16 + number.length();;
-                            break;
-                        case "numerico":
-                            System.out.println(imprimir +" = []");
-                            System.out.println("for i in range(" + number +"):");
-                            System.out.println("    " + imprimir + ".append(0)");
-                            global = global+ 18 + number.length();;
-                            break;
-                        case "logico":
-                            System.out.println(imprimir +" = []");
-                            System.out.println("for i in range(" + number +"):");
-                            System.out.println("    " + imprimir + ".append(True)");
-                            global = global + 16 + number.length();
-                            break;
-                            default:
-                                break;
+                    System.out.println(matriz + " = []");
+                    if (numbers[j].matches("[0-9]*")){
+                        System.out.println("for i in range(" + numbers[j] +"):");
+                        System.out.println("    " + matriz + append);
+
+
                     }
-                    imprimir = "";
-                    number = "";
-                }else if(aux[i+1]=='m'){
-                    String tipo = "";
-                    ArrayList<String> tamannos = new ArrayList<>();
-                    for(int f=i+8;f<aux.length;f++){
-                        if(aux[f]=='l' ){
-                            tipo = "logico";
-                            break;
-                        }else if(aux[f]==',' || aux[f]==']'){
-                            tamannos.add(number);
-                            number = "";
-                        }else if(aux[f]=='c') {
-                            tipo = "cadena";
-                            break;
-                        }else if(aux[f]=='n'){
-                            tipo = "numerico";
-                            break;
-                        }else if(aux[f]!=','){
-                            number += aux[f];
-                        }
-                    }switch (tipo){
-                        case "cadena":
-                            System.out.println("Contenido de tamannos");
-                            for(int z = 0; z<tamannos.size();z++){
-                                System.out.print(tamannos.get(z)+" ");
-                            }
-                            System.out.println(imprimir +" = []");
-                            for(int k=0;k<tamannos.size();k++){
-                                System.out.println("aux"+k +"= []");
-                            }
-                            System.out.println("for i in range(" + tamannos.get(tamannos.size()-1) +"):");
-                            System.out.println("    " + "aux0" + ".append('')");
-                            for(int k=tamannos.size()-2;k>0;k--){
-                                System.out.println("for i in range(" + tamannos.get(k) +"):");
-                                System.out.println("    " + "aux"+(tamannos.size()-k-1) + ".append(aux" + (tamannos.size()-k-2)+ ")");
-                            }
-                            System.out.println("for i in range(" + tamannos.get(0) +"):");
-                            System.out.println("    " + imprimir + ".append(aux"+(tamannos.size()-2)+")");
-                            global = global+ 16 + number.length();;
-                            break;
-                        case "numerico":
-                            System.out.println("Contenido de tamannos");
-                            for(int z = 0; z<tamannos.size();z++){
-                                System.out.print(tamannos.get(z)+" ");
-                            }
-                            System.out.println(imprimir +" = []");
-                            for(int k=0;k<tamannos.size();k++){
-                                System.out.println("aux"+k +"= []");
-                            }
-                            System.out.println("for i in range(" + tamannos.get(tamannos.size()-1) +"):");
-                            System.out.println("    " + "aux0" + ".append(0)");
-                            for(int k=tamannos.size()-2;k>0;k--){
-                                System.out.println("for i in range(" + tamannos.get(k) +"):");
-                                System.out.println("    " + "aux"+(tamannos.size()-k-1) + ".append(aux" + (tamannos.size()-k-2)+ ")");
-                            }
-                            System.out.println("for i in range(" + tamannos.get(0) +"):");
-                            System.out.println("    " + imprimir + ".append(aux"+(tamannos.size()-2)+")");
-                            global = global+ 16 + number.length();;
-                            break;
-                        case "logico":
-                            System.out.println("Contenido de tamannos");
-                            for(int z = 0; z<tamannos.size();z++){
-                                System.out.print(tamannos.get(z)+" ");
-                            }
-                            System.out.println(imprimir +" = []");
-                            for(int k=0;k<tamannos.size();k++){
-                                System.out.println("aux"+k +"= []");
-                            }
-                            System.out.println("for i in range(" + tamannos.get(tamannos.size()-1) +"):");
-                            System.out.println("    " + "aux0" + ".append(True)");
-                            for(int k=tamannos.size()-2;k>0;k--){
-                                System.out.println("for i in range(" + tamannos.get(k) +"):");
-                                System.out.println("    " + "aux"+(tamannos.size()-k-1) + ".append(aux" + (tamannos.size()-k-2)+ ")");
-                            }
-                            System.out.println("for i in range(" + tamannos.get(0) +"):");
-                            System.out.println("    " + imprimir + ".append(aux"+(tamannos.size()-2)+")");
-                            global = global+ 16 + number.length();;
-                            break;
-                        default:
-                            break;
-                    }
-                    imprimir = "";
-                    number = "";
+                    append = ".append(" + matriz + ")";
+                    matriz = "aux" + Integer.toString(j);
                 }
             }
         }
+
+        System.out.println(variables2.toString());
+    }
+
+    public void exitTipo_var(LenguajeSLParser.Tipo_varContext ctx) {
     }
 }
 
