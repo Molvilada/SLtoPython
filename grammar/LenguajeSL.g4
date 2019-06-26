@@ -70,7 +70,7 @@ tipo_id
     | ID
     ;
 
-registro
+registro //Ya
     : REGISTRO LLAVE_IZQ  tipo_var+ LLAVE_DER
     ;
 
@@ -175,6 +175,7 @@ expresion
     | FALSE
     | SI
     | NO
+    | condicion
     ;
 
 lista_llaves
@@ -240,6 +241,8 @@ p
     : id_complejo
     | NUMERO
     | CADENA_L
+    | TRUE
+    | FALSE
     ;
 
 // CARACTERES

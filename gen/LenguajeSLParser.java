@@ -2964,6 +2964,8 @@ public class LenguajeSLParser extends Parser {
 				break;
 			case PAR_IZQ:
 			case SUMA:
+			case FALSE:
+			case TRUE:
 			case ID:
 			case NUMERO:
 			case CADENA_L:
@@ -3529,6 +3531,8 @@ public class LenguajeSLParser extends Parser {
 			switch (_input.LA(1)) {
 			case PAR_IZQ:
 			case SUMA:
+			case FALSE:
+			case TRUE:
 			case ID:
 			case NUMERO:
 			case CADENA_L:
@@ -3629,6 +3633,8 @@ public class LenguajeSLParser extends Parser {
 				}
 				break;
 			case SUMA:
+			case FALSE:
+			case TRUE:
 			case ID:
 			case NUMERO:
 			case CADENA_L:
@@ -3736,6 +3742,8 @@ public class LenguajeSLParser extends Parser {
 		}
 		public TerminalNode NUMERO() { return getToken(LenguajeSLParser.NUMERO, 0); }
 		public TerminalNode CADENA_L() { return getToken(LenguajeSLParser.CADENA_L, 0); }
+		public TerminalNode TRUE() { return getToken(LenguajeSLParser.TRUE, 0); }
+		public TerminalNode FALSE() { return getToken(LenguajeSLParser.FALSE, 0); }
 		public PContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -3759,7 +3767,7 @@ public class LenguajeSLParser extends Parser {
 		PContext _localctx = new PContext(_ctx, getState());
 		enterRule(_localctx, 92, RULE_p);
 		try {
-			setState(553);
+			setState(555);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case ID:
@@ -3781,6 +3789,20 @@ public class LenguajeSLParser extends Parser {
 				{
 				setState(552);
 				match(CADENA_L);
+				}
+				break;
+			case TRUE:
+				enterOuterAlt(_localctx, 4);
+				{
+				setState(553);
+				match(TRUE);
+				}
+				break;
+			case FALSE:
+				enterOuterAlt(_localctx, 5);
+				{
+				setState(554);
+				match(FALSE);
 				}
 				break;
 			default:
@@ -3838,7 +3860,7 @@ public class LenguajeSLParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3>\u022e\4\2\t\2\4"+
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3>\u0230\4\2\t\2\4"+
 		"\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t"+
 		"\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22"+
 		"\4\23\t\23\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30\4\31\t\31"+
@@ -3877,19 +3899,19 @@ public class LenguajeSLParser extends Parser {
 		"+\3+\3+\3+\3+\3+\3+\3+\3+\3+\3+\3+\3+\3+\5+\u01fa\n+\3,\3,\3,\3,\5,\u0200"+
 		"\n,\3-\3-\3-\3-\3-\5-\u0207\n-\3.\3.\5.\u020b\n.\3/\3/\3/\3/\3/\3/\7/"+
 		"\u0213\n/\f/\16/\u0216\13/\3/\5/\u0219\n/\3/\3/\3/\3/\3/\3/\3/\3/\3/\7"+
-		"/\u0224\n/\f/\16/\u0227\13/\3\60\3\60\3\60\5\60\u022c\n\60\3\60\2\5&<"+
-		"\\\61\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36 \"$&(*,.\60\62\64\668:<>"+
-		"@BDFHJLNPRTVXZ\\^\2\3\4\2\n\n\23\24\2\u0254\2a\3\2\2\2\4r\3\2\2\2\6u\3"+
-		"\2\2\2\b\u008c\3\2\2\2\n\u008f\3\2\2\2\f\u0095\3\2\2\2\16\u009b\3\2\2"+
-		"\2\20\u009d\3\2\2\2\22\u00a6\3\2\2\2\24\u00af\3\2\2\2\26\u00b8\3\2\2\2"+
-		"\30\u00c4\3\2\2\2\32\u00c8\3\2\2\2\34\u00cc\3\2\2\2\36\u00d7\3\2\2\2 "+
-		"\u00d9\3\2\2\2\"\u00e2\3\2\2\2$\u00e8\3\2\2\2&\u00f7\3\2\2\2(\u0100\3"+
-		"\2\2\2*\u0116\3\2\2\2,\u0123\3\2\2\2.\u012f\3\2\2\2\60\u0139\3\2\2\2\62"+
-		"\u014b\3\2\2\2\64\u0152\3\2\2\2\66\u0156\3\2\2\28\u0160\3\2\2\2:\u0167"+
+		"/\u0224\n/\f/\16/\u0227\13/\3\60\3\60\3\60\3\60\3\60\5\60\u022e\n\60\3"+
+		"\60\2\5&<\\\61\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36 \"$&(*,.\60\62\64"+
+		"\668:<>@BDFHJLNPRTVXZ\\^\2\3\4\2\n\n\23\24\2\u0258\2a\3\2\2\2\4r\3\2\2"+
+		"\2\6u\3\2\2\2\b\u008c\3\2\2\2\n\u008f\3\2\2\2\f\u0095\3\2\2\2\16\u009b"+
+		"\3\2\2\2\20\u009d\3\2\2\2\22\u00a6\3\2\2\2\24\u00af\3\2\2\2\26\u00b8\3"+
+		"\2\2\2\30\u00c4\3\2\2\2\32\u00c8\3\2\2\2\34\u00cc\3\2\2\2\36\u00d7\3\2"+
+		"\2\2 \u00d9\3\2\2\2\"\u00e2\3\2\2\2$\u00e8\3\2\2\2&\u00f7\3\2\2\2(\u0100"+
+		"\3\2\2\2*\u0116\3\2\2\2,\u0123\3\2\2\2.\u012f\3\2\2\2\60\u0139\3\2\2\2"+
+		"\62\u014b\3\2\2\2\64\u0152\3\2\2\2\66\u0156\3\2\2\28\u0160\3\2\2\2:\u0167"+
 		"\3\2\2\2<\u0175\3\2\2\2>\u019b\3\2\2\2@\u01a4\3\2\2\2B\u01a6\3\2\2\2D"+
 		"\u01ae\3\2\2\2F\u01ba\3\2\2\2H\u01c1\3\2\2\2J\u01c8\3\2\2\2L\u01ca\3\2"+
 		"\2\2N\u01db\3\2\2\2P\u01dd\3\2\2\2R\u01e7\3\2\2\2T\u01f9\3\2\2\2V\u01ff"+
-		"\3\2\2\2X\u0206\3\2\2\2Z\u020a\3\2\2\2\\\u0218\3\2\2\2^\u022b\3\2\2\2"+
+		"\3\2\2\2X\u0206\3\2\2\2Z\u020a\3\2\2\2\\\u0218\3\2\2\2^\u022d\3\2\2\2"+
 		"`b\5\4\3\2a`\3\2\2\2ab\3\2\2\2bf\3\2\2\2ce\5\16\b\2dc\3\2\2\2eh\3\2\2"+
 		"\2fd\3\2\2\2fg\3\2\2\2gi\3\2\2\2hf\3\2\2\2im\5\26\f\2jl\5\6\4\2kj\3\2"+
 		"\2\2lo\3\2\2\2mk\3\2\2\2mn\3\2\2\2np\3\2\2\2om\3\2\2\2pq\7\2\2\3q\3\3"+
@@ -4033,13 +4055,15 @@ public class LenguajeSLParser extends Parser {
 		"\u021e\f\6\2\2\u021e\u021f\t\2\2\2\u021f\u0224\5\\/\7\u0220\u0221\f\5"+
 		"\2\2\u0221\u0222\7\30\2\2\u0222\u0224\5\\/\6\u0223\u021a\3\2\2\2\u0223"+
 		"\u021d\3\2\2\2\u0223\u0220\3\2\2\2\u0224\u0227\3\2\2\2\u0225\u0223\3\2"+
-		"\2\2\u0225\u0226\3\2\2\2\u0226]\3\2\2\2\u0227\u0225\3\2\2\2\u0228\u022c"+
-		"\5N(\2\u0229\u022c\79\2\2\u022a\u022c\7:\2\2\u022b\u0228\3\2\2\2\u022b"+
-		"\u0229\3\2\2\2\u022b\u022a\3\2\2\2\u022c_\3\2\2\2:afmy}\u0082\u008c\u008f"+
-		"\u009b\u00a0\u00a4\u00a9\u00ad\u00b2\u00b6\u00bb\u00bf\u00d7\u00de\u00f7"+
-		"\u00fd\u0108\u010e\u0112\u011e\u0127\u0134\u0140\u0146\u014e\u015d\u0164"+
-		"\u016e\u0175\u017d\u017f\u019b\u01a4\u01ae\u01ba\u01c1\u01c8\u01cc\u01d0"+
-		"\u01d7\u01db\u01e7\u01f9\u01ff\u0206\u020a\u0214\u0218\u0223\u0225\u022b";
+		"\2\2\u0225\u0226\3\2\2\2\u0226]\3\2\2\2\u0227\u0225\3\2\2\2\u0228\u022e"+
+		"\5N(\2\u0229\u022e\79\2\2\u022a\u022e\7:\2\2\u022b\u022e\7\65\2\2\u022c"+
+		"\u022e\7!\2\2\u022d\u0228\3\2\2\2\u022d\u0229\3\2\2\2\u022d\u022a\3\2"+
+		"\2\2\u022d\u022b\3\2\2\2\u022d\u022c\3\2\2\2\u022e_\3\2\2\2:afmy}\u0082"+
+		"\u008c\u008f\u009b\u00a0\u00a4\u00a9\u00ad\u00b2\u00b6\u00bb\u00bf\u00d7"+
+		"\u00de\u00f7\u00fd\u0108\u010e\u0112\u011e\u0127\u0134\u0140\u0146\u014e"+
+		"\u015d\u0164\u016e\u0175\u017d\u017f\u019b\u01a4\u01ae\u01ba\u01c1\u01c8"+
+		"\u01cc\u01d0\u01d7\u01db\u01e7\u01f9\u01ff\u0206\u020a\u0214\u0218\u0223"+
+		"\u0225\u022d";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

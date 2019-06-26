@@ -1,21 +1,9 @@
 var
-    f : registro{
-        z : logico
-    }
-    l : logico
-    a : cadena
-	x : vector [1000] logico
-	z : vector [10] numerico
-	y : vector [10]  logico
-	n : numerico
+   F : matriz [26,10,15,19,20,15,84,66,99] cadena
+   F : matriz [26,10,15,19,20,15,84,66,99] logico
+   F : matriz [26,10,15,19,20,15,84,66,99] numerico
+   F : matriz [26,10,15,19,20,15,84,66,99] cadena
 inicio
-    leer(f)
-    leer(n)
-    z[1] = 0
-    imprimir(pi(z))
-fin
-
-subrutina pi(N : vector[10] numerico) retorna numerico
-inicio
-	retorna (3.141516*N[1])
+	F[26,10,15,19,20,15,84,66,99] = "hola"
+	imprimir(F[1,2])
 fin

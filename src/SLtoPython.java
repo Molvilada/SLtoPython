@@ -6,6 +6,7 @@ import javax.xml.bind.SchemaOutputResolver;
 import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.Stack;
+import java.util.concurrent.locks.Condition;
 
 public class SLtoPython extends LenguajeSLBaseListener {
 
@@ -13,33 +14,71 @@ public class SLtoPython extends LenguajeSLBaseListener {
     private static int tabs_si = 0;
     private static int caso = 0;
     public static Hashtable<String, String> variables2 = new Hashtable<String, String>();
-    public static ArrayList<String> subrutinas = new ArrayList<>();
 
-    public void enterPrograma(LenguajeSLParser.ProgramaContext ctx) {
-
-    }
-
-    public void exitPrograma(LenguajeSLParser.ProgramaContext ctx) {
-
-    }
-
-    public void enterPrograma_principal(LenguajeSLParser.Programa_principalContext ctx) {
-        System.out.println(ctx.getText());
-        System.out.println();
-    }
-
-    public void exitPrograma_principal(LenguajeSLParser.Programa_principalContext ctx) {
-    }
-
-    @Override public void enterConstantes(LenguajeSLParser.ConstantesContext ctx) {
+    @Override public void enterConstante(LenguajeSLParser.ConstanteContext ctx) {
         System.out.println(ctx.getText());
     }
 
     @Override public void enterAsignacion(LenguajeSLParser.AsignacionContext ctx) {
         for (int i = 0; i < tabs; i++) System.out.print("\t");
-        System.out.println(ctx.getText());
+        String contexto = ctx.getText();
+        if(ctx.getText().contains(".")){
+            String [] aux = contexto.split("=");
+            String puntos = aux[0];
+            String [] aux2 = puntos.split("[.]");
+            String cadena = "";
+            for (int i = 1; i < aux2.length; i++){
+                cadena += "['" + aux2[i] + "']";
+                System.out.printf("r"+ cadena);
+                if (i < aux2.length - 1){
+                    System.out.println("= {}");
+                }else{
+                    System.out.println("= " + aux[1]);
+                }
+            }
+
+        }else{
+            System.out.println(contexto);
+        }
     }
 
+    @Override
+    public void enterTipos(LenguajeSLParser.TiposContext ctx) {
+       /* String tipos = ctx.getText();
+        tipos = tipos.substring(5);
+        String [] tipos_separados = tipos.split(":");
+        variables2.put(tipos_separados[0], "tipo");
+        System.out.println("class " + tipos_separados[0] + ":");
+        System.out.println("    def _init_(self,"+tipos_separados[1]);*/
+
+    }
+
+    public void enterTipo(LenguajeSLParser.TipoContext ctx) {
+        System.out.println("class " + ctx.ID().getText() + ":");
+        String tipos = ctx.tipo_id().getText();
+        String [] tipo = new String[2];
+        if (tipos.contains("registro")){
+            tipo[0] = "registro";
+            tipo[1] = "self.registro = {}";
+        }
+        else if (tipos.contains("vector")){
+            tipo[0] = "vector";
+            tipo[1] = "self.vector = []";
+        }
+        if (tipos.contains("matriz")){
+            tipo[0] = "matriz";
+            tipo[1] = "self.matriz = []";
+        }
+        if (tipos.contains("numerico") || tipos.contains("cadena") || tipos.contains("logico")){
+            tipo[0] = "variable";
+            tipo[1] = "self.variable";
+        }
+        System.out.println("    def _init_(self,"+ tipo[0] +"):");
+        System.out.println("        "+ tipo[1]);
+    }
+
+    public void exitTipo(LenguajeSLParser.TipoContext ctx) {
+    }
 
     @Override public void enterSi(LenguajeSLParser.SiContext ctx) {
         for (int i = 0; i < tabs; i++) System.out.print("\t");
@@ -197,6 +236,9 @@ public class SLtoPython extends LenguajeSLBaseListener {
                 System.out.println(parametros + " = input()");
             }
         }else{
+            for(int i = 0; i< parametros.length(); i++){
+
+            }
             System.out.println(id + "(" + parametros + ")");
         }
     }
@@ -267,12 +309,13 @@ public class SLtoPython extends LenguajeSLBaseListener {
 
     @Override
     public void enterDesde(LenguajeSLParser.DesdeContext ctx) {
-        for (int i = 0; i < tabs; i++) System.out.print("\t");
-        System.out.print("for ");
+        for (int i = 0; i < tabs; i++) {
+            System.out.print("\t");
+        }
         if (ctx.paso()!= null){
-            System.out.println(ctx.ID().getText()+" in range(" + ctx.a().get(0).getText()+ "," + ctx.a().get(1).getText() + "," + ctx.paso().a().getText() + "):");
+            System.out.println("for " + ctx.ID().getText()+" in range(" + ctx.a().get(0).getText()+ "," + ctx.a().get(1).getText() + "," + ctx.paso().a().getText() + "):");
         }else{
-            System.out.println(ctx.ID().getText()+" in range(" + ctx.a().get(0).getText()+ "," + ctx.a().get(1).getText() + "):");
+            System.out.println("for " + ctx.ID().getText()+" in range(" + ctx.a().get(0).getText()+ "," + ctx.a().get(1).getText() + "):");
         }
         tabs++;
     }
@@ -294,7 +337,6 @@ public class SLtoPython extends LenguajeSLBaseListener {
 
     @Override
     public void enterSubrutina(LenguajeSLParser.SubrutinaContext ctx) {
-        for (int i = 0; i < tabs; i++) System.out.print("\t");
         if(ctx.lista_argumentos()!=null){
             String aux = ctx.lista_argumentos().getText();
             char [] copia_aux = aux.toCharArray();
@@ -310,25 +352,30 @@ public class SLtoPython extends LenguajeSLBaseListener {
                     imprimir += copia_aux[i];
                 }
             }
-
-            System.out.println("def " + ctx.ID().getText() + "(" + imprimir + "):");
+            System.out.print("def " + ctx.ID().getText() + "(" + imprimir + "):\n");
         }else{
-            System.out.println("def " + ctx.ID().getText() + "():");
+            System.out.print("def " + ctx.ID().getText() + "():\n");
         }
         tabs++;
+    }
+
+    public void exitSubrutina(LenguajeSLParser.SubrutinaContext ctx) {
+        tabs--;
+    }
+
+    @Override
+    public void enterId_puntos(LenguajeSLParser.Id_puntosContext ctx) {
+        //String id = ctx.getText();
     }
 
     @Override
     public void enterVariables(LenguajeSLParser.VariablesContext ctx) {
         for (int i = 0; i < tabs; i++) System.out.print("\t");
         String variables = ctx.getText();
-        System.out.println(variables);
         char [] aux = variables.toCharArray();
-        System.out.println(variables);
         String imprimir = "";
         int global = 3;
         String number = "";
-
         for(int i = 3; i<aux.length;i++){
             if(aux[i]==':') {
                 for (int j = global; j < i; j++) {
@@ -347,13 +394,6 @@ public class SLtoPython extends LenguajeSLBaseListener {
                     variables2.put(imprimir,"logico");
                     global = global+8;
                     imprimir="";
-                }else if(aux[i+1]=='r'){
-                    variables2.put(imprimir, "registro");
-                    System.out.println("class" + imprimir + ":");
-                    tabs++;
-                    global = global+10;
-                    imprimir="";
-                    tabs--;
                 }else if(aux[i+1]=='v'){
                     String tipo = "";
                     for(int f = i+8;f<aux.length;f++){
@@ -391,6 +431,88 @@ public class SLtoPython extends LenguajeSLBaseListener {
                             break;
                             default:
                                 break;
+                    }
+                    imprimir = "";
+                    number = "";
+                }else if(aux[i+1]=='m'){
+                    String tipo = "";
+                    ArrayList<String> tamannos = new ArrayList<>();
+                    for(int f=i+8;f<aux.length;f++){
+                        if(aux[f]=='l' ){
+                            tipo = "logico";
+                            break;
+                        }else if(aux[f]==',' || aux[f]==']'){
+                            tamannos.add(number);
+                            number = "";
+                        }else if(aux[f]=='c') {
+                            tipo = "cadena";
+                            break;
+                        }else if(aux[f]=='n'){
+                            tipo = "numerico";
+                            break;
+                        }else if(aux[f]!=','){
+                            number += aux[f];
+                        }
+                    }switch (tipo){
+                        case "cadena":
+                            System.out.println("Contenido de tamannos");
+                            for(int z = 0; z<tamannos.size();z++){
+                                System.out.print(tamannos.get(z)+" ");
+                            }
+                            System.out.println(imprimir +" = []");
+                            for(int k=0;k<tamannos.size();k++){
+                                System.out.println("aux"+k +"= []");
+                            }
+                            System.out.println("for i in range(" + tamannos.get(tamannos.size()-1) +"):");
+                            System.out.println("    " + "aux0" + ".append('')");
+                            for(int k=tamannos.size()-2;k>0;k--){
+                                System.out.println("for i in range(" + tamannos.get(k) +"):");
+                                System.out.println("    " + "aux"+(tamannos.size()-k-1) + ".append(aux" + (tamannos.size()-k-2)+ ")");
+                            }
+                            System.out.println("for i in range(" + tamannos.get(0) +"):");
+                            System.out.println("    " + imprimir + ".append(aux"+(tamannos.size()-2)+")");
+                            global = global+ 16 + number.length();;
+                            break;
+                        case "numerico":
+                            System.out.println("Contenido de tamannos");
+                            for(int z = 0; z<tamannos.size();z++){
+                                System.out.print(tamannos.get(z)+" ");
+                            }
+                            System.out.println(imprimir +" = []");
+                            for(int k=0;k<tamannos.size();k++){
+                                System.out.println("aux"+k +"= []");
+                            }
+                            System.out.println("for i in range(" + tamannos.get(tamannos.size()-1) +"):");
+                            System.out.println("    " + "aux0" + ".append(0)");
+                            for(int k=tamannos.size()-2;k>0;k--){
+                                System.out.println("for i in range(" + tamannos.get(k) +"):");
+                                System.out.println("    " + "aux"+(tamannos.size()-k-1) + ".append(aux" + (tamannos.size()-k-2)+ ")");
+                            }
+                            System.out.println("for i in range(" + tamannos.get(0) +"):");
+                            System.out.println("    " + imprimir + ".append(aux"+(tamannos.size()-2)+")");
+                            global = global+ 16 + number.length();;
+                            break;
+                        case "logico":
+                            System.out.println("Contenido de tamannos");
+                            for(int z = 0; z<tamannos.size();z++){
+                                System.out.print(tamannos.get(z)+" ");
+                            }
+                            System.out.println(imprimir +" = []");
+                            for(int k=0;k<tamannos.size();k++){
+                                System.out.println("aux"+k +"= []");
+                            }
+                            System.out.println("for i in range(" + tamannos.get(tamannos.size()-1) +"):");
+                            System.out.println("    " + "aux0" + ".append(True)");
+                            for(int k=tamannos.size()-2;k>0;k--){
+                                System.out.println("for i in range(" + tamannos.get(k) +"):");
+                                System.out.println("    " + "aux"+(tamannos.size()-k-1) + ".append(aux" + (tamannos.size()-k-2)+ ")");
+                            }
+                            System.out.println("for i in range(" + tamannos.get(0) +"):");
+                            System.out.println("    " + imprimir + ".append(aux"+(tamannos.size()-2)+")");
+                            global = global+ 16 + number.length();;
+                            break;
+                        default:
+                            break;
                     }
                     imprimir = "";
                     number = "";
