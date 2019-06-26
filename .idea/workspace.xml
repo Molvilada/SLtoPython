@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/SLtoPython.java" description="        if(ctx.a_comas().a().p().NUMERO() != null)..." line="331" />
+    <bookmark url="file://$PROJECT_DIR$/src/SLtoPython.java" description="        if(ctx.a_comas().a().p().NUMERO() != null)..." line="335" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a12d47a-d3cf-47da-89d4-389401c061a2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/SLtoPython.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SLtoPython.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input/entrada.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input/entrada.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SLtoPython/SLtoPython.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SLtoPython/SLtoPython.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SLtoPython.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SLtoPython.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,8 +55,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/input/entrada.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="371">
+              <caret line="65" column="3" selection-start-line="65" selection-start-column="3" selection-end-line="65" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -64,8 +64,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SLtoPython.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="35">
-              <caret line="626" column="10" selection-start-line="626" selection-start-column="8" selection-end-line="631" selection-end-column="11" />
+            <state relative-caret-position="220">
+              <caret line="343" column="48" selection-start-line="343" selection-start-column="48" selection-end-line="343" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#5673#5674#0" expanded="true" />
@@ -96,10 +96,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>&quot;for</find>
-      <find>varia</find>
-      <find>desd</find>
-      <find>sub</find>
       <find>eval</find>
       <find>des</find>
       <find>&quot;    &quot;</find>
@@ -126,6 +122,10 @@
       <find>asignacion</find>
       <find>leer</find>
       <find>llave</find>
+      <find>var</find>
+      <find>enterVar</find>
+      <find>funcion</find>
+      <find>System.out.print(</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -262,7 +262,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78322000" />
+    <option name="totallyTimeSpent" value="79054000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -411,10 +411,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/grammar/LenguajeSL.g4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3230">
+          <caret line="190" column="7" selection-start-line="190" selection-end-line="190" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input/entrada.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="65" column="3" selection-start-line="65" selection-start-column="3" selection-end-line="65" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/SLtoPython.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="626" column="10" selection-start-line="626" selection-start-column="8" selection-end-line="631" selection-end-column="11" />
+        <state relative-caret-position="220">
+          <caret line="343" column="48" selection-start-line="343" selection-start-column="48" selection-end-line="343" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#5673#5674#0" expanded="true" />
@@ -428,20 +442,6 @@
             <element signature="e#14439#14440#0" expanded="true" />
             <element signature="e#14461#14462#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grammar/LenguajeSL.g4">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3230">
-          <caret line="190" column="7" selection-start-line="190" selection-end-line="190" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/input/entrada.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>

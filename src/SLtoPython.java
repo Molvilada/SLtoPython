@@ -237,6 +237,10 @@ public class SLtoPython extends LenguajeSLBaseListener {
         }
         if (id.equals("imprimir")){
             System.out.println("print(" + parametros + ")");
+        }else if(id.equals("alen")){
+            System.out.println("len("+parametros+")");
+        }else if(id.equals("cls")){
+            System.out.print("");
         }
         else if (id.equals("leer")){
             String [] parametros_aux = parametros.split(",");
@@ -335,10 +339,14 @@ public class SLtoPython extends LenguajeSLBaseListener {
         for (int i = 0; i < tabs; i++) {
             System.out.print("\t");
         }
+        String hasta = ctx.a().get(1).getText();
+        if(hasta.contains("alen")){
+            hasta = "len"+hasta.substring(4);
+        }
         if (ctx.paso()!= null){
-            System.out.println("for " + ctx.ID().getText()+" in range(" + ctx.a().get(0).getText()+ "," + ctx.a().get(1).getText() + "+1," + ctx.paso().a().getText() + "):");
+            System.out.println("for " + ctx.ID().getText()+" in range(" + ctx.a().get(0).getText()+ "," + hasta + "+1," + ctx.paso().a().getText() + "):");
         }else{
-            System.out.println("for " + ctx.ID().getText()+" in range(" + ctx.a().get(0).getText()+ "," + ctx.a().get(1).getText() + "+1):");
+            System.out.println("for " + ctx.ID().getText()+" in range(" + ctx.a().get(0).getText()+ "," + hasta + "+1):");
         }
         tabs++;
     }
