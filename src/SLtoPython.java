@@ -43,6 +43,16 @@ public class SLtoPython extends LenguajeSLBaseListener {
             }
         }else if(ctx.expresion().getText().startsWith("{")){
             System.out.print(ctx.id_complejo().getText() + " = ");
+            char [] aux = ctx.expresion().getText().toCharArray();
+            for(int i =0; i< aux.length;i++){
+                if (aux[i] !='{'&& aux[i]!= '}'){
+                    System.out.print(aux[i]);
+                } else if (aux[i] =='{') {
+                    System.out.print('[');
+                }else if(aux[i]=='}'){
+                    System.out.println(']');
+                }
+            }
         }else{
             System.out.print(contexto);
         }
@@ -616,12 +626,12 @@ public class SLtoPython extends LenguajeSLBaseListener {
     }
 
     public void enterLlave(LenguajeSLParser.LlaveContext ctx) {
-        String [] llaves = ctx.a_comas().getText().split(",");
+        /*String [] llaves = ctx.a_comas().getText().split(",");
         System.out.print("[" + llaves[0]);
 
         for(int i = 1; i < llaves.length; i++){
             System.out.print("," + llaves[i]);
-        }
+        }*/
 
     }
 }

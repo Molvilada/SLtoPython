@@ -1,38 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/SLtoPython.java" description="        if(ctx.a_comas().a().p().NUMERO() != null)..." line="323" />
+    <bookmark url="file://$PROJECT_DIR$/src/SLtoPython.java" description="        if(ctx.a_comas().a().p().NUMERO() != null)..." line="331" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a12d47a-d3cf-47da-89d4-389401c061a2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/SLtoPython.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SLtoPython.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/LenguajeSL.interp" beforeDir="false" afterPath="$PROJECT_DIR$/gen/LenguajeSL.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/LenguajeSLBaseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/gen/LenguajeSLBaseListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/LenguajeSLBaseVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/gen/LenguajeSLBaseVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/LenguajeSLLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/gen/LenguajeSLLexer.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/LenguajeSLLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/gen/LenguajeSLLexer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/LenguajeSLListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/gen/LenguajeSLListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/LenguajeSLParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/gen/LenguajeSLParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/LenguajeSLVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/gen/LenguajeSLVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grammar/LenguajeSL.g4" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/LenguajeSL.g4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input/entrada.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input/entrada.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSL.interp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSL.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLLexer.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser$AContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser$AContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser$A_comasContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser$A_comasContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser$ExpresionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser$ExpresionContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser$Id_comasContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser$Id_comasContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser$Id_complejoContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser$Id_complejoContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser$Id_puntosContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser$Id_puntosContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser$Lista_llavesContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser$Lista_llavesContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser$Lista_tamanoContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser$Lista_tamanoContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser$Llamada_funcionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser$Llamada_funcionContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser$LlaveContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser$LlaveContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser$PContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser$PContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser$RetornaContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser$RetornaContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser$TamanoContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser$TamanoContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SLtoPython/SLtoPython.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SLtoPython/SLtoPython.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SLtoPython.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SLtoPython.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -72,22 +46,39 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLBaseListener.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="281" lean-forward="true" selection-start-line="281" selection-end-line="281" />
+            <state relative-caret-position="321">
+              <caret line="126" column="14" selection-start-line="126" selection-start-column="14" selection-end-line="126" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/input/entrada.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/input/entrada.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gen/LenguajeSLBaseListener.java">
+        <entry file="file://$PROJECT_DIR$/src/SLtoPython.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6964">
-              <caret line="173" column="26" selection-start-line="173" selection-start-column="26" selection-end-line="173" selection-end-column="26" />
+            <state relative-caret-position="35">
+              <caret line="626" column="10" selection-start-line="626" selection-start-column="8" selection-end-line="631" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#5673#5674#0" expanded="true" />
+                <element signature="e#5698#5699#0" expanded="true" />
+                <element signature="e#5971#5972#0" expanded="true" />
+                <element signature="e#5996#5997#0" expanded="true" />
+                <element signature="e#7194#7195#0" expanded="true" />
+                <element signature="e#7216#7217#0" expanded="true" />
+                <element signature="e#13099#13100#0" expanded="true" />
+                <element signature="e#13121#13122#0" expanded="true" />
+                <element signature="e#14439#14440#0" expanded="true" />
+                <element signature="e#14461#14462#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -95,25 +86,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grammar/LenguajeSL.g4">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="186" column="22" selection-start-line="186" selection-start-column="17" selection-end-line="186" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SLtoPython.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="625" selection-start-line="625" selection-end-line="625" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#5698#5699#0" expanded="true" />
-                <element signature="e#5996#5997#0" expanded="true" />
-                <element signature="e#7216#7217#0" expanded="true" />
-                <element signature="e#13121#13122#0" expanded="true" />
-                <element signature="e#14461#14462#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="3230">
+              <caret line="190" column="7" selection-start-line="190" selection-end-line="190" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -161,8 +135,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/grammar/LenguajeSL.g4" />
-        <option value="$PROJECT_DIR$/src/SLtoPython.java" />
         <option value="$PROJECT_DIR$/input/entrada.txt" />
+        <option value="$PROJECT_DIR$/src/SLtoPython.java" />
       </list>
     </option>
   </component>
@@ -186,6 +160,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -193,34 +168,6 @@
             <path>
               <item name="SLtoPython" type="b2602c69:ProjectViewProjectNode" />
               <item name="SLtoPython" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SLtoPython" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SLtoPython" type="462c0819:PsiDirectoryNode" />
-              <item name="gen" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SLtoPython" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SLtoPython" type="462c0819:PsiDirectoryNode" />
-              <item name="gen" type="462c0819:PsiDirectoryNode" />
-              <item name="LenguajeSLBaseListener" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="SLtoPython" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SLtoPython" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SLtoPython" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SLtoPython" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="SLtoPython" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="SLtoPython" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SLtoPython" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Traductor" type="1a9f42e2:ClassTreeNode" />
             </path>
             <path>
               <item name="SLtoPython" type="b2602c69:ProjectViewProjectNode" />
@@ -250,11 +197,15 @@
               <item name="production" type="462c0819:PsiDirectoryNode" />
               <item name="SLtoPython" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="SLtoPython" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SLtoPython" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -262,10 +213,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/input/entrada.txt" />
+    <property name="last_opened_file_path" value="C:/Apps/ANTLR/antlr-4.7.2-complete.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -310,7 +262,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77998000" />
+    <option name="totallyTimeSpent" value="78322000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -322,10 +274,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20988539" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21028744" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -334,7 +286,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.35833332" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.2913257" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -447,8 +399,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/out/production/SLtoPython/LenguajeSLBaseListener.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="281" lean-forward="true" selection-start-line="281" selection-end-line="281" />
+        <state relative-caret-position="321">
+          <caret line="126" column="14" selection-start-line="126" selection-start-column="14" selection-end-line="126" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -461,14 +413,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SLtoPython.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="625" selection-start-line="625" selection-end-line="625" />
+        <state relative-caret-position="35">
+          <caret line="626" column="10" selection-start-line="626" selection-start-column="8" selection-end-line="631" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#5673#5674#0" expanded="true" />
             <element signature="e#5698#5699#0" expanded="true" />
+            <element signature="e#5971#5972#0" expanded="true" />
             <element signature="e#5996#5997#0" expanded="true" />
+            <element signature="e#7194#7195#0" expanded="true" />
             <element signature="e#7216#7217#0" expanded="true" />
+            <element signature="e#13099#13100#0" expanded="true" />
             <element signature="e#13121#13122#0" expanded="true" />
+            <element signature="e#14439#14440#0" expanded="true" />
             <element signature="e#14461#14462#0" expanded="true" />
           </folding>
         </state>
@@ -476,13 +433,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grammar/LenguajeSL.g4">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="186" column="22" selection-start-line="186" selection-start-column="17" selection-end-line="186" selection-end-column="22" />
+        <state relative-caret-position="3230">
+          <caret line="190" column="7" selection-start-line="190" selection-end-line="190" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/input/entrada.txt">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
@@ -540,7 +501,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

@@ -11,10 +11,12 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../../antlr-4.7.2-complete.jar!/" />
+          <root url="jar://A:/antlr-4.7.2-complete.jar!/" />
+          <root url="file://C:/Apps/ANTLR" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
+        <jarDirectory url="file://C:/Apps/ANTLR" recursive="false" />
       </library>
     </orderEntry>
   </component>
